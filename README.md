@@ -33,8 +33,6 @@ data/                  Network-pharmacology inputs (hub genes, PPI network, scor
 output/
   results/             Simulation result tables (CSV); v4 files are the current model
   figures/             Generated figures (PNG)
-PROJECT_PLAN.md        Model design and module specification
-SCIENTIFIC_IMPROVEMENTS.md  Notes on model refinements
 ```
 
 ## Requirements
