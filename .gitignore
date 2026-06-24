@@ -1,0 +1,14 @@
+# Manuscript files are intentionally excluded from this repository
+manuscript/
+*.docx
+
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS / editor
+.DS_Store
+Thumbs.db
+~$*

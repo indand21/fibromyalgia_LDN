@@ -1,0 +1,41 @@
+"Gene","Relevance_score","QSP_Module","In_QSP_Model"
+"COMT",13.34,"Monoamine",FALSE
+"FMR1",12.49,"Neurotransmission",FALSE
+"BDNF",11.5,"Pain",TRUE
+"IGF1",10.73,"Growth",FALSE
+"HTR3A",10.28,"Serotonin",FALSE
+"SLC6A4",9.91,"Serotonin",TRUE
+"HTR2A",9.87,"Serotonin",FALSE
+"OPRM1",9.53,"Opioid",FALSE
+"IL6",9.5,"Inflammation",TRUE
+"CXCL8",9.38,"Inflammation",TRUE
+"TACR1",9.22,"Pain",FALSE
+"POMC",9.07,"HPA Axis",TRUE
+"LEP",8.93,"Metabolic",FALSE
+"CRP",8.93,"Inflammation",FALSE
+"CCL2",8.6,"Inflammation",TRUE
+"CRH",8.41,"HPA Axis",TRUE
+"TNF",8.41,"Inflammation",TRUE
+"MAOA",8.32,"Monoamine",FALSE
+"ADRB2",8.24,"Adrenergic",FALSE
+"NGF",8.18,"Pain",TRUE
+"TSPO",8.13,"Neuroinflammation",FALSE
+"IL4",8.11,"Inflammation",FALSE
+"NPY",7.86,"HPA Axis",TRUE
+"IL1B",7.75,"Inflammation",TRUE
+"IL10",7.64,"Inflammation",TRUE
+"SCN9A",7.37,"Pain",FALSE
+"PNOC",7.14,"Pain",FALSE
+"ESR1",1.99,"Hormonal",FALSE
+"ACE",1.99,"RAAS",FALSE
+"MTHFR",1.99,"Metabolism",FALSE
+"NOS3",2.15,"NO pathway",FALSE
+"NR3C1",1.33,"HPA Axis",TRUE
+"TRPV1",0.71,"Pain",TRUE
+"TRPV2",1.14,"Pain",FALSE
+"TRPV3",1.14,"Pain",FALSE
+"ASIC3",0.71,"Pain",FALSE
+"TAC1",0.71,"Pain",TRUE
+"NLRP3",1.33,"Inflammation",TRUE
+"GSR",0.55,"Oxidative Stress",FALSE
+"TLR4",0.55,"Innate Immune",TRUE
