@@ -1,0 +1,7 @@
+"hypothesis_a","hypothesis_b","elpd_diff_a_minus_b","se_diff","n_obs","ratio_diff_over_se","note"
+"H0","H1",1.94677180090085,1.41282294516479,2,1.37793048135538,"PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"H0","H2",-0.00177115396716998,0.00477991519984589,2,-0.370540876379373,"PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"H0","H3",1.8377165397088,1.03145489033144,2,1.7816741739605,"PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"H1","H2",-1.94854295486802,1.40804302996495,2,-1.38386605622168,"PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"H1","H3",-0.109055261192049,0.381368054833351,2,-0.28595803924821,"PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"H2","H3",1.83948769367597,1.0266749751316,2,1.79169429296763,"PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."

@@ -1,0 +1,14 @@
+analyte,species,target,quantity,value,unit,source,location,verified
+NTX,human,MOR,Ki,0.11,nM,Wentland 2009 (DOI 10.1016/j.bmcl.2009.02.078),Table 1 compound 3 (NTRX); CHO membranes expressing human MOR; [3H]DAMGO,yes
+NTX,human,DOR,Ki,60.0,nM,Wentland 2009 (DOI 10.1016/j.bmcl.2009.02.078),Table 1 compound 3 (NTRX); CHO membranes expressing human DOR; [3H]naltrindole,yes
+NTX,human,KOR,Ki,0.19,nM,Wentland 2009 (DOI 10.1016/j.bmcl.2009.02.078),Table 1 compound 3 (NTRX); CHO membranes expressing human KOR; [3H]U69593,yes
+BN,human,MOR,Ki,2.12,nM,Pelotte 2009 (DOI 10.1016/j.bmcl.2009.03.095),Table 1 row 6-beta-naltrexol HCl; CHO cells expressing human MOR; [3H]DAMGO,yes
+BN,human,DOR,Ki,213.0,nM,Pelotte 2009 (DOI 10.1016/j.bmcl.2009.03.095),Table 1 row 6-beta-naltrexol HCl; CHO cells expressing human DOR; [3H]DADLE,yes
+BN,human,KOR,Ki,7.42,nM,Pelotte 2009 (DOI 10.1016/j.bmcl.2009.03.095),Table 1 row 6-beta-naltrexol HCl; CHO cells expressing human KOR; [3H]U69593,yes
+NTX,human,MOR,Ki,1.1,nM,Cassel 2005 (DOI 10.1016/j.ejphar.2005.08.008),Table 1 naltrexone row; cloned human MOR; [3H]diprenorphine competition,yes
+NTX,human,MOR,Ki,0.86,nM,Cassel 2005 (DOI 10.1016/j.ejphar.2005.08.008),Table 1 naltrexone row; cloned human MOR; [3H]alvimopan competition,yes
+NTX,human,MOR,koff,21.0,1/h,Cassel 2005 (DOI 10.1016/j.ejphar.2005.08.008),"Table 2 naltrexone row; cloned human MOR at room temperature; reported as 0.35 per min, dissociation half-life 2.0 min; converted to 21.0 per h for the model time unit",yes
+NTX,mouse,TLR4,IC50,105.5,uM,Wang 2016 (DOI 10.1111/bph.13394),Results; inhibition of LPS-induced nitric oxide production in BV-2 microglia by (+)-naltrexone; 95 pct CI 95.4 to 115.6 uM,yes
+NTX,mouse,TLR4,IC50,105.5,uM,Selfridge 2015 (DOI 10.1021/acs.jmedchem.5b00426),Table 1 compound 1a (+)-naltrexone; nitric oxide assay in BV-2 microglia; independent report of the same assay value,yes
+BN,mouse,TLR4,IC50,242.8,uM,Selfridge 2015 (DOI 10.1021/acs.jmedchem.5b00426),Table 1 compound 2 (+)-beta-naltrexol; nitric oxide assay in BV-2 microglia,yes
+NTX,human,plasma_protein,fu,0.79,fraction,ReVia naltrexone hydrochloride tablets FDA label 2013 (NDA 018932),"CLINICAL PHARMACOLOGY, Distribution; label states naltrexone is 21 pct bound to plasma proteins",yes

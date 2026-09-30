@@ -1,0 +1,27 @@
+R version 4.5.1 (2025-06-13 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 22631)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_India.utf8  LC_CTYPE=English_India.utf8   
+[3] LC_MONETARY=English_India.utf8 LC_NUMERIC=C                  
+[5] LC_TIME=English_India.utf8    
+
+time zone: Asia/Calcutta
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.1
+
+Explicit package versions:
+deSolve 1.42
+posterior 1.6.1
+loo 2.9.0
+sensitivity 1.30.2
+ggplot2 4.0.3

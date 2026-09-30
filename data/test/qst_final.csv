@@ -1,0 +1,7 @@
+measure,diff,lo95,hi95,unit,favours,source,location,verified
+pressure_pain_tolerance_left_leg,-2.6,-5.8,0.5,kPa,positive difference favours LDN,Due Bruun 2025 (DOI 10.1007/s40263-025-01183-7),"Table 2, difference between groups, complete case population 45 LDN versus 47 placebo",yes
+pressure_pain_tolerance_right_leg,-0.5,-3.3,2.2,kPa,positive difference favours LDN,Due Bruun 2025 (DOI 10.1007/s40263-025-01183-7),"Table 2, difference between groups, complete case population 45 LDN versus 47 placebo",yes
+temporal_summation_of_pain,-0.1,-0.9,0.7,VAS_cm,negative difference favours LDN,Due Bruun 2025 (DOI 10.1007/s40263-025-01183-7),"Table 2, difference between groups, complete case population 45 LDN versus 47 placebo",yes
+conditioned_pain_modulation,2.0,0.4,3.7,kPa,positive difference favours LDN,Due Bruun 2025 (DOI 10.1007/s40263-025-01183-7),"Table 2, difference between groups, complete case population 45 LDN versus 47 placebo",yes
+chair_stand_30s,0.3,-0.5,1.1,count,positive difference favours LDN,Due Bruun 2025 (DOI 10.1007/s40263-025-01183-7),"Table 2, difference between groups, complete case population 45 LDN versus 47 placebo",yes
+arm_hold_time,3.7,-14.2,21.5,s,positive difference favours LDN,Due Bruun 2025 (DOI 10.1007/s40263-025-01183-7),"Table 2, difference between groups, complete case population 45 LDN versus 47 placebo",yes

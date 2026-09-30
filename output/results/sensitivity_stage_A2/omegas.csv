@@ -1,0 +1,5 @@
+"hypothesis","omega_p","omega_e","sd_res","achieved_sd_pbo","target_sd_pbo","achieved_sd_ldn","target_sd_ldn","at_bound","scale_used","base_sd_source"
+"H0",1.98740801649508,0,0.48,27.8999602344524,27.9,NA,NA,FALSE,"pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)","pbo:assumed 1.5; ldn:assumed 1.5"
+"H1",2.26991569454569,0.00227827243951083,0.48,27.8999006728602,27.9,24.8643824312959,24,TRUE,"pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)","pbo:assumed 1.5; ldn:assumed 1.5"
+"H2",1.99966244693604,7.57518370303458e-05,0.48,27.8999568955386,27.9,29.1181662289224,24,TRUE,"pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)","pbo:assumed 1.5; ldn:assumed 1.5"
+"H3",2.26697858026868,0.00280536645101672,0.48,27.8998967366157,27.9,24.9182870065035,24,TRUE,"pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)","pbo:assumed 1.5; ldn:assumed 1.5"

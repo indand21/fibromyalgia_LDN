@@ -1,0 +1,9 @@
+trial,arm,day,nrs_mean,nrs_sd,n,source,location,verified
+innova,ldn_4.5mg,0,7.66,1.55,47,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; n is the intention-to-treat per-arm n of 47 and 49 used in Table 4",yes
+innova,placebo,0,7.47,1.66,49,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; n is the intention-to-treat per-arm n of 47 and 49 used in Table 4",yes
+innova,ldn_4.5mg,90,7.33,1.48,NA,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; per-visit n not reported",yes
+innova,placebo,90,6.83,1.96,NA,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; per-visit n not reported",yes
+innova,ldn_4.5mg,180,7.21,1.65,NA,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; per-visit n not reported",yes
+innova,placebo,180,7.08,2.13,NA,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; per-visit n not reported",yes
+innova,ldn_4.5mg,365,7.38,1.86,NA,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; per-visit n not reported",yes
+innova,placebo,365,7.1,2.26,NA,Rodriguez-Freire 2026 INNOVA (DOI 10.1002/ejp.70321),"Table 3, NRS 0-10, intention-to-treat; B is LDN minus placebo in NRS level; per-visit n not reported",yes

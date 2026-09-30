@@ -1,0 +1,5 @@
+cytokine,quantity,value,unit,source,location,verified
+TNF-alpha,thalf,20,min,Selby 1987 (DOI 10.1038/bjc.1987.294),Abstract; recombinant human TNF cleared from plasma in patients with advanced cancer,yes
+IL-6,thalf,4.2,h,Weber 1993 (DOI 10.1200/JCO.1993.11.3.499),Abstract; terminal half-life after a single subcutaneous dose of recombinant human IL-6,yes
+IL-10,thalf_lower,2.7,h,Huhn 1997 (DOI 10.1016/S0009-9236(97)90065-5),Abstract; mean terminal-phase half-life range across dose groups,yes
+IL-10,thalf_upper,4.5,h,Huhn 1997 (DOI 10.1016/S0009-9236(97)90065-5),Abstract; mean terminal-phase half-life range across dose groups,yes

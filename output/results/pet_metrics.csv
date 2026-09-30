@@ -1,0 +1,7 @@
+"stage","n","RMSE","MAE","n_within_15","rows"
+"A",11,31.4369057016255,25.0999925259254,4,"all rows"
+"A2 held-out",5,46.1591171951011,42.8384087486523,0,"held-out rows only (n = 5)"
+"A held-out (matched)",5,22.6924509236521,17.5816586232507,2,"same held-out rows as A2 held-out"
+"A2 all",11,31.5702815868132,22.4774964907049,6,"all rows (6 calibration + 5 held-out)"
+"A2 calibration",6,7.19014340401804,5.51006960908211,6,"calibration rows (Rabiner; fitted)"
+"A calibration",6,37.184971866804,31.3652707781543,2,"calibration rows (Rabiner; not fitted under A)"

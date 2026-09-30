@@ -1,0 +1,4 @@
+hypothesis H2, d = 3, 8.5 ms/evaluation, ~1.4 min for 10000 evaluations
+Registered S3 method overwritten by 'sensitivity':
+  method    from 
+  print.src dplyr

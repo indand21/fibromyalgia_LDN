@@ -1,0 +1,2 @@
+"stage_A_rmse_heldout","stage_A2_rmse_heldout","stage_A_rmse_all","stage_A2_rmse_all","n_heldout","n_all","stage_adopted","reason"
+22.6924509236521,46.1591171951011,31.4369057016255,31.5702815868132,5,11,"A","A2 does not improve RMSE on the 5 held-out (non-calibration) rows (46.16 vs 22.69 for stage A on the same rows): stage A kept. A2 wins only on the rows it was fitted to."

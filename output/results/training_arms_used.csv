@@ -1,0 +1,5 @@
+"trial","arm","day","mean","se","status","reason"
+"younger2013","placebo",28,18,5.26,"included",""
+"younger2013","ldn_4.5mg",84,28.8,4.53,"included",""
+"younger2009","placebo",14,2.3,NA,"excluded","no dispersion reported in source"
+"younger2009","ldn_4.5mg",56,32.5,NA,"excluded","no dispersion reported in source"

@@ -1,0 +1,3 @@
+drug,endpoint,quantity,value,unit,lo95,hi95,source,location,verified
+naltrexone,fibromyalgia_symptom_response,ED50,3.88,mg,NA,NA,Bruun-Plesner 2020 (DOI 10.1093/pm/pnaa001),Abstract and Results; single-blind up-and-down study in 25 evaluable women with fibromyalgia,yes
+naltrexone,fibromyalgia_symptom_response,ED95,5.4,mg,NA,NA,Bruun-Plesner 2020 (DOI 10.1093/pm/pnaa001),Abstract and Results; single-blind up-and-down study in 25 evaluable women with fibromyalgia,yes

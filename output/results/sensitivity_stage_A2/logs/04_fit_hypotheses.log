@@ -1,0 +1,10 @@
+        trial       arm day mean   se   status                           reason
+1 younger2013   placebo  28 18.0 5.26 included                                 
+2 younger2013 ldn_4.5mg  84 28.8 4.53 included                                 
+3 younger2009   placebo  14  2.3   NA excluded no dispersion reported in source
+4 younger2009 ldn_4.5mg  56 32.5   NA excluded no dispersion reported in source
+Warning messages:
+1: Some Pareto k diagnostic values are too high. See help('pareto-k-diagnostic') for details.
+ 
+2: Some Pareto k diagnostic values are too high. See help('pareto-k-diagnostic') for details.
+ 

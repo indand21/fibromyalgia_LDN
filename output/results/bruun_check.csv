@@ -1,0 +1,4 @@
+"hypothesis","peak_dose_mg","model_ED50_mg","observed_ED50_mg","observed_ED95_mg"
+"H1",0.75,0.375,3.88,5.4
+"H2",6,2.99993281330752,3.88,5.4
+"H3",6,1.57888378452473,3.88,5.4

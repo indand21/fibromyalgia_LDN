@@ -1,0 +1,14 @@
+                 stage  n      RMSE      MAE n_within_15
+1                    A 11 31.436906 25.09999           4
+2          A2 held-out  5 46.159117 42.83841           0
+3 A held-out (matched)  5 22.692451 17.58166           2
+4               A2 all 11 31.570282 22.47750           6
+5       A2 calibration  6  7.190143  5.51007           6
+6        A calibration  6 37.184972 31.36527           2
+                                            rows
+1                                       all rows
+2                     held-out rows only (n = 5)
+3              same held-out rows as A2 held-out
+4          all rows (6 calibration + 5 held-out)
+5             calibration rows (Rabiner; fitted)
+6 calibration rows (Rabiner; not fitted under A)

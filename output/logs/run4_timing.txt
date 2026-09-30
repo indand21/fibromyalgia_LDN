@@ -1,0 +1,12 @@
+01_fit_pk rc=0 secs=24
+02_binding_bottomup rc=0 secs=14
+03_test_pet rc=0 secs=16
+04_fit_hypotheses rc=0 secs=2693
+05_calibrate_variability rc=0 secs=2
+06_test_trials rc=0 secs=94
+07_virtual_trials rc=0 secs=3557
+08_test_cytokines rc=0 secs=4
+09_sobol rc=0 secs=32
+10_figures rc=0 secs=55
+11_tables rc=0 secs=0
+ALLDONE

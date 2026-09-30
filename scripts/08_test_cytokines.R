@@ -1,0 +1,20 @@
+options(v5.root = normalizePath(".", winslash = "/")); source("R/utils.R"); source_all()
+dir.create("output/results", recursive = TRUE, showWarnings = FALSE)
+stage <- readLines("output/results/binding_stage.txt")[1]
+cache <- readRDS(sprintf("output/results/exposure_cache_%s.rds", stage))
+if (is.null(cache[["4.5"]])) stop("exposure cache has no entry for the 4.5 mg dose")
+obs <- read_test_data("data/test/cytokines_parkitny.csv", "B")
+cp <- read_dataset("data/params/cytokine_params.csv")
+out <- do.call(rbind, lapply(c("H0", "H1", "H2", "H3"), function(h) {
+  f <- readRDS(sprintf("output/results/posterior_%s.rds", h))
+  idx <- round(seq(1, nrow(f$draws), length.out = 500))
+  pr <- do.call(rbind, lapply(idx, function(i) cytokine_prediction(h, theta_from(f$draws[i, ], h, f$fixed), cache[["4.5"]], cp, obs$day[1])))
+  agg <- stats::aggregate(pct_change_pred ~ cytokine, pr, function(x) c(med = stats::median(x), lo = stats::quantile(x, .05), hi = stats::quantile(x, .95)))
+  agg <- data.frame(cytokine = agg$cytokine, agg$pct_change_pred); names(agg)[2:4] <- c("pred_median", "pred_lo90", "pred_hi90")
+  agg$hypothesis <- h; agg
+}))
+out <- merge(out, obs[, c("cytokine", "pct_change", "se", "p_value", "n")], by = "cytokine", all = TRUE)
+out$predicted <- !is.na(out$pred_median)
+no_pred <- setdiff(unique(obs$cytokine), unique(out$cytokine[out$predicted]))
+if (length(no_pred)) warning("no curated half-life, so no prediction for: ", paste(no_pred, collapse = ", "))
+write.csv(out, "output/results/cytokine_test.csv", row.names = FALSE)

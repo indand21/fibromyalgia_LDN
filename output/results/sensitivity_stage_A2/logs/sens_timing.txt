@@ -1,0 +1,7 @@
+04_fit_hypotheses rc=0 secs=2968
+05_calibrate_variability rc=0 secs=3
+06_test_trials rc=0 secs=99
+08_test_cytokines rc=0 secs=4
+09_sobol rc=0 secs=40
+07_virtual_trials rc=0 secs=4470
+ALLDONE

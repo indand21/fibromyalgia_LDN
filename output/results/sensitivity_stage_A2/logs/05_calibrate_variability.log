@@ -1,0 +1,27 @@
+Warning messages:
+1: In calibrate_omegas(fit, arms, cache, sd_res = sd_res) :
+  H1: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 24.86 vs 24; omega_p=2.27, omega_e=0.002; at_bound=TRUE)
+2: In calibrate_omegas(fit, arms, cache, sd_res = sd_res) :
+  H2: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 29.12 vs 24; omega_p=2, omega_e=0; at_bound=TRUE)
+3: In calibrate_omegas(fit, arms, cache, sd_res = sd_res) :
+  H3: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 24.92 vs 24; omega_p=2.267, omega_e=0.003; at_bound=TRUE)
+  hypothesis  omega_p      omega_e sd_res achieved_sd_pbo target_sd_pbo
+1         H0 1.987408 0.000000e+00   0.48        27.89996          27.9
+2         H1 2.269916 2.278272e-03   0.48        27.89990          27.9
+3         H2 1.999662 7.575184e-05   0.48        27.89996          27.9
+4         H3 2.266979 2.805366e-03   0.48        27.89990          27.9
+  achieved_sd_ldn target_sd_ldn at_bound
+1              NA            NA    FALSE
+2        24.86438            24     TRUE
+3        29.11817            24     TRUE
+4        24.91829            24     TRUE
+                                           scale_used
+1 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
+2 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
+3 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
+4 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
+                    base_sd_source
+1 pbo:assumed 1.5; ldn:assumed 1.5
+2 pbo:assumed 1.5; ldn:assumed 1.5
+3 pbo:assumed 1.5; ldn:assumed 1.5
+4 pbo:assumed 1.5; ldn:assumed 1.5

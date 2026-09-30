@@ -1,0 +1,7 @@
+"parameter","estimate","se_transformed","convergence","source_type"
+"ka",9.72173331332343,NA,0,"fitted (training PK summaries)"
+"fp",0.928670364293991,NA,0,"fitted (training PK summaries)"
+"CL",10.6896356417994,NA,0,"fitted (training PK summaries)"
+"V1",150.59656838901,NA,0,"fitted (training PK summaries)"
+"CLm",54.7802714259872,NA,0,"fitted (training PK summaries)"
+"Vm",921.276272219474,NA,0,"fitted (training PK summaries)"

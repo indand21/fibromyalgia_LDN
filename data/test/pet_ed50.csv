@@ -1,0 +1,2 @@
+drug,endpoint,quantity,value,unit,lo95,hi95,source,location,verified
+naltrexone,MOR_occupancy,ED50,5.6,mg,3.65,7.54,Rabiner 2011 (DOI 10.1038/mp.2011.29),"Results, PET data; dose-occupancy fit using scans acquired under 8 h post dose",yes

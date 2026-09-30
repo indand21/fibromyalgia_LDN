@@ -1,0 +1,6 @@
+Stage-A (bottom-up) PET RMSE: 31.44 percentage points (n = 11; MAE 25.10; 4 within 15 points)
+Stage A2 fitted (fallback triggered at RMSE > 15): yes
+Held-out rows (matched): stage A RMSE 22.69 vs stage A2 RMSE 46.16 (n = 5); all rows: A 31.44 vs A2 31.57
+Decision rule: adopt A2 only if it improves held-out RMSE relative to A on the same rows. A2 does not improve RMSE on the 5 held-out (non-calibration) rows (46.16 vs 22.69 for stage A on the same rows): stage A kept. A2 wins only on the rows it was fitted to.
+Binding stage carried forward: A
+Reference convention: 7 row(s) 'absolute' (prediction = 100 * RO(t)); 4 row(s) 'normalised to 1 h scan' (prediction = 100 * RO(t) / RO(1 h), same dose and regimen); the convention used per row is in the `reference` column of pet_test.csv

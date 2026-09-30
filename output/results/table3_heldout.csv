@@ -1,0 +1,67 @@
+"block","hypothesis","item","observed","pred_median","pred_lo90","pred_hi90","inside90","metric","value","footnote"
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A",NA,NA,NA,NA,NA,"n",11,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A",NA,NA,NA,NA,NA,"RMSE",31.4369057016255,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A",NA,NA,NA,NA,NA,"MAE",25.0999925259254,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A",NA,NA,NA,NA,NA,"n_within_15",4,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 held-out",NA,NA,NA,NA,NA,"n",5,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 held-out",NA,NA,NA,NA,NA,"RMSE",46.1591171951011,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 held-out",NA,NA,NA,NA,NA,"MAE",42.8384087486523,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 held-out",NA,NA,NA,NA,NA,"n_within_15",0,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A held-out (matched)",NA,NA,NA,NA,NA,"n",5,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A held-out (matched)",NA,NA,NA,NA,NA,"RMSE",22.6924509236521,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A held-out (matched)",NA,NA,NA,NA,NA,"MAE",17.5816586232507,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A held-out (matched)",NA,NA,NA,NA,NA,"n_within_15",2,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 all",NA,NA,NA,NA,NA,"n",11,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 all",NA,NA,NA,NA,NA,"RMSE",31.5702815868132,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 all",NA,NA,NA,NA,NA,"MAE",22.4774964907049,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 all",NA,NA,NA,NA,NA,"n_within_15",6,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 calibration",NA,NA,NA,NA,NA,"n",6,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 calibration",NA,NA,NA,NA,NA,"RMSE",7.19014340401804,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 calibration",NA,NA,NA,NA,NA,"MAE",5.51006960908211,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A2 calibration",NA,NA,NA,NA,NA,"n_within_15",6,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A calibration",NA,NA,NA,NA,NA,"n",6,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A calibration",NA,NA,NA,NA,NA,"RMSE",37.184971866804,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A calibration",NA,NA,NA,NA,NA,"MAE",31.3652707781543,NA
+"PET occupancy (Lee 1988, Rabiner 2011)","all (hypothesis-independent)","stage A calibration",NA,NA,NA,NA,NA,"n_within_15",2,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H0","final day 84 (primary)",-0.34,-0.00776563301303325,-0.829569077233011,0.764753711375228,TRUE,"lpd",-0.510383799703153,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H0","innova day 90 (primary)",0.31,-0.0168311582425891,-1.00394391352187,0.913535230573464,TRUE,"lpd",-0.60625031165621,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H0","innova day 180 (secondary)",-0.06,-0.0168329688061177,-1.003944902563,0.913532935321037,TRUE,"lpd",-0.475896907416864,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H0","innova day 365 (secondary)",0.09,-0.0168329689333948,-1.0039449026354,0.913532935131739,TRUE,"lpd",-0.516695143193509,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H1","final day 84 (primary)",-0.34,-0.478066366907182,-1.32485560750197,0.374479231365701,TRUE,"lpd",-0.381588846989741,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H1","innova day 90 (primary)",0.31,-0.679632823630842,-1.75583931827829,0.383497826134402,TRUE,"lpd",-1.59469802267223,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H1","innova day 180 (secondary)",-0.06,-0.693192964858726,-1.83500419524253,0.368425152515525,TRUE,"lpd",-1.02851349199085,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H1","innova day 365 (secondary)",0.09,-0.703153738279048,-1.85209464220954,0.368312286859937,TRUE,"lpd",-1.24049451335756,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H2","final day 84 (primary)",-0.34,-0.00798204560779692,-0.837011183668753,0.818384993580258,TRUE,"lpd",-0.507108265119645,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H2","innova day 90 (primary)",0.31,-0.0176030361516261,-1.02517422816422,0.985519723846185,TRUE,"lpd",-0.607754692272548,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H2","innova day 180 (secondary)",-0.06,-0.0176061320392539,-1.02517606942608,0.985515716999345,TRUE,"lpd",-0.465179138052465,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H2","innova day 365 (secondary)",0.09,-0.0176061568224473,-1.02517606958044,0.98551568135128,TRUE,"lpd",-0.509845465854589,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H3","final day 84 (primary)",-0.34,-0.919572663943403,-2.04668511160731,0.176424737861432,TRUE,"lpd",-0.91351462439183,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H3","innova day 90 (primary)",0.31,-1.02580792267447,-2.32535830316091,0.244566982186948,FALSE,"lpd",-2.04083602667633,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H3","innova day 180 (secondary)",-0.06,-1.05775107600813,-2.4110448299865,0.241603945919203,TRUE,"lpd",-1.47041019183954,NA
+"Held-out trials (FINAL, INNOVA): diff in NRS change","H3","innova day 365 (secondary)",0.09,-1.06059046284925,-2.45003015840297,0.241593477498765,TRUE,"lpd",-1.67720385433477,NA
+"Held-out trials: PRIMARY test log predictive density, one endpoint per trial (final d84 + innova d90)","H0","primary endpoints",NA,NA,NA,NA,NA,"elpd_primary",-1.11663411135936,NA
+"Held-out trials: PRIMARY test log predictive density, one endpoint per trial (final d84 + innova d90)","H1","primary endpoints",NA,NA,NA,NA,NA,"elpd_primary",-1.97628686966197,NA
+"Held-out trials: PRIMARY test log predictive density, one endpoint per trial (final d84 + innova d90)","H2","primary endpoints",NA,NA,NA,NA,NA,"elpd_primary",-1.11486295739219,NA
+"Held-out trials: PRIMARY test log predictive density, one endpoint per trial (final d84 + innova d90)","H3","primary endpoints",NA,NA,NA,NA,NA,"elpd_primary",-2.95435065106816,NA
+"Held-out trials: SECONDARY, non-independent sum over all scored days (INNOVA days correlated)","H0","all days",NA,NA,NA,NA,NA,"elpd_all_days_secondary_nonindependent",-2.10922616196974,NA
+"Held-out trials: SECONDARY, non-independent sum over all scored days (INNOVA days correlated)","H1","all days",NA,NA,NA,NA,NA,"elpd_all_days_secondary_nonindependent",-4.24529487501038,NA
+"Held-out trials: SECONDARY, non-independent sum over all scored days (INNOVA days correlated)","H2","all days",NA,NA,NA,NA,NA,"elpd_all_days_secondary_nonindependent",-2.08988756129925,NA
+"Held-out trials: SECONDARY, non-independent sum over all scored days (INNOVA days correlated)","H3","all days",NA,NA,NA,NA,NA,"elpd_all_days_secondary_nonindependent",-6.10196469724247,NA
+"Held-out trials: pairwise PRIMARY elpd contrasts (a minus b; n = 2, SE poorly estimated, indicative only)","H0","H0 vs H1",NA,NA,NA,NA,NA,"elpd_diff_a_minus_b",0.859652758302608,"SE 1.117; diff/SE 0.77; n_obs 2. PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"Held-out trials: pairwise PRIMARY elpd contrasts (a minus b; n = 2, SE poorly estimated, indicative only)","H0","H0 vs H2",NA,NA,NA,NA,NA,"elpd_diff_a_minus_b",-0.00177115396716998,"SE 0.005; diff/SE -0.37; n_obs 2. PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"Held-out trials: pairwise PRIMARY elpd contrasts (a minus b; n = 2, SE poorly estimated, indicative only)","H0","H0 vs H3",NA,NA,NA,NA,NA,"elpd_diff_a_minus_b",1.8377165397088,"SE 1.031; diff/SE 1.78; n_obs 2. PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"Held-out trials: pairwise PRIMARY elpd contrasts (a minus b; n = 2, SE poorly estimated, indicative only)","H1","H1 vs H2",NA,NA,NA,NA,NA,"elpd_diff_a_minus_b",-0.861423912269778,"SE 1.112; diff/SE -0.77; n_obs 2. PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"Held-out trials: pairwise PRIMARY elpd contrasts (a minus b; n = 2, SE poorly estimated, indicative only)","H1","H1 vs H3",NA,NA,NA,NA,NA,"elpd_diff_a_minus_b",0.978063781406189,"SE 0.086; diff/SE 11.40; n_obs 2. PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"Held-out trials: pairwise PRIMARY elpd contrasts (a minus b; n = 2, SE poorly estimated, indicative only)","H2","H2 vs H3",NA,NA,NA,NA,NA,"elpd_diff_a_minus_b",1.83948769367597,"SE 1.027; diff/SE 1.79; n_obs 2. PRIMARY endpoints only (FINAL d84, INNOVA d90). With n = 2 the SE is poorly estimated; the comparison is indicative only, not decisive."
+"Cytokines (Parkitny 2017), % change","H0","IL-10",-27.3,0,0,0,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H3","IL-10",-27.3,-16.0062263542576,-32.4237610088883,-0.307324613513713,TRUE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H2","IL-10",-27.3,-0.00273512667057473,-0.00273512667057473,-0.00273512667057473,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H1","IL-10",-27.3,0,0,0,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H1","IL-6",-35.3,0,0,0,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H0","IL-6",-35.3,0,0,0,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H3","IL-6",-35.3,-16.0062263542576,-32.4237610088883,-0.307324613513713,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H2","IL-6",-35.3,-0.00273512667057473,-0.00273512667057473,-0.00273512667057473,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H2","TNF-alpha",-5.8,-0.00273512667057473,-0.00273512667057473,-0.00273512667057473,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H1","TNF-alpha",-5.8,0,0,0,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H0","TNF-alpha",-5.8,0,0,0,FALSE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"
+"Cytokines (Parkitny 2017), % change","H3","TNF-alpha",-5.8,-16.0062263542576,-32.4237610088883,-0.307324613513713,TRUE,NA,NA,"No prediction (no curated half-life): IL-17A, IL-1beta, TGF-beta"

@@ -1,0 +1,7 @@
+cytokine,pct_change,se,p_value,p_lt,n,day,source,location,verified
+TNF-alpha,-5.8,NA,0.002,no,8,56,Parkitny 2017 (DOI 10.3390/biomedicines5020016),Table 2; pct change derived from the reported baseline and drug phase means of 146.9 and 138.4 pg/mL,yes
+IL-1beta,-34.8,NA,0.01,no,8,56,Parkitny 2017 (DOI 10.3390/biomedicines5020016),Table 2; pct change derived from the reported baseline and drug phase means of 2.3 and 1.5 pg/mL,yes
+IL-6,-35.3,NA,0.001,yes,8,56,Parkitny 2017 (DOI 10.3390/biomedicines5020016),Table 2; pct change derived from the reported means of 15.0 and 9.7 pg/mL; p reported as less than 0.001 so p_lt is yes and p_value holds the reported bound,yes
+IL-10,-27.3,NA,0.008,no,8,56,Parkitny 2017 (DOI 10.3390/biomedicines5020016),Table 2; pct change derived from the reported baseline and drug phase means of 22.7 and 16.5 pg/mL,yes
+IL-17A,-15.5,NA,0.003,no,8,56,Parkitny 2017 (DOI 10.3390/biomedicines5020016),Table 2; pct change derived from the reported baseline and drug phase means of 8.4 and 7.1 pg/mL,yes
+TGF-beta,-14.4,NA,0.006,no,8,56,Parkitny 2017 (DOI 10.3390/biomedicines5020016),Table 2; pct change derived from the reported baseline and drug phase means of 38.2 and 32.7 pg/mL,yes

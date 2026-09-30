@@ -1,0 +1,11 @@
+"study","dose_mg","analyte","stat","unit","mean","sd","n","source","location","verified","pred"
+"Verebey 1976",100,"NTX","Cmax","ng/mL",43.6,29.9,4,"Verebey 1976 (PMID 954353)","Abstract; acute single oral dose","yes",45.6799206068182
+"Verebey 1976",100,"NTX","Tmax","h",1,NA,4,"Verebey 1976 (PMID 954353)","Abstract; acute single oral dose","yes",0.5
+"Verebey 1976",100,"BN","Cmax","ng/mL",87.2,25,4,"Verebey 1976 (PMID 954353)","Abstract; acute single oral dose","yes",98.4526996512173
+"Verebey 1976",100,"BN","Tmax","h",2,NA,4,"Verebey 1976 (PMID 954353)","Abstract; acute single oral dose","yes",0.5
+"Verebey 1976",100,"NTX","thalf","h",10.3,3.3,4,"Verebey 1976 (PMID 954353)","Abstract; acute dosing","yes",9.76512020976268
+"Verebey 1976",100,"BN","thalf","h",12.7,2.6,4,"Verebey 1976 (PMID 954353)","Abstract; acute dosing","yes",11.9333482595855
+"Verebey 1976 chronic",100,"NTX","Cmax","ng/mL",46.4,18.5,4,"Verebey 1976 (PMID 954353)","Abstract; chronic daily dosing peak at 1 h","yes",45.6799206068182
+"Verebey 1976 chronic",100,"BN","Cmax","ng/mL",158.4,89.9,4,"Verebey 1976 (PMID 954353)","Abstract; chronic daily dosing peak at 1 h","yes",98.4526996512173
+"Verebey 1976 chronic",100,"NTX","thalf","h",9.7,1.1,4,"Verebey 1976 (PMID 954353)","Abstract; chronic dosing","yes",9.76512020976268
+"Verebey 1976 chronic",100,"BN","thalf","h",11.4,2,4,"Verebey 1976 (PMID 954353)","Abstract; chronic dosing","yes",11.9333482595855
