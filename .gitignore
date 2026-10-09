@@ -2,3 +2,5 @@ output/results/*.rds
 .Rhistory
 .RData
 .superpowers/
+output/results/virtual_trials*.csv
+output/sensitivity_work/

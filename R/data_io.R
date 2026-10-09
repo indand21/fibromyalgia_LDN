@@ -7,8 +7,9 @@ read_dataset <- function(file) {
   if (any(is.na(d$source) | trimws(d$source) == "")) stop(basename(file), " has rows without a source")
   if (any(grepl("^\\s*literature\\s*$", d$source, ignore.case = TRUE)))
     stop(basename(file), ": 'Literature' is not a source; cite the reference")
-  if (!all(d$verified %in% c("yes", "secondary", "no")))
-    stop(basename(file), ": verified must be yes/secondary/no")
+  # `digitised` (R4 fix round 1): the value was read off a published figure (method in `location`)
+  if (!all(d$verified %in% c("yes", "secondary", "no", "digitised")))
+    stop(basename(file), ": verified must be yes/secondary/no/digitised")
   d
 }
 

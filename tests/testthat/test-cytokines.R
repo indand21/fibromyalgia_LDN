@@ -45,3 +45,18 @@ test_that("bounds average and missing half-lives error", {
   expect_equal(cytokine_prediction("H2", th, prof, b, 0.05)$pct_change_pred, -50 * (1 - exp(-log(2) / 2 * 1.2)), tolerance = 1e-8)
   expect_error(cytokine_prediction("H2", th, prof, b[1, ], 56), "no usable half-life")
 })
+
+# ---- R3a item 6, M11: each observation row is predicted at its OWN day ----
+test_that("cytokine_predict_rows uses each row's own day, not the first row's", {
+  th <- list(Emax = 0.5, IC50_TLR4 = 1)
+  cp1 <- data.frame(cytokine = "TNF", quantity = "thalf", value = 1, unit = "h")
+  obs <- data.frame(cytokine = c("TNF", "TNF"), day = c(0.05, 56))
+  r <- cytokine_predict_rows("H2", th, prof, cp1, obs)
+  expect_equal(nrow(r), 2); expect_equal(r$day, c(0.05, 56))
+  expect_equal(r$pct_change_pred[1], cytokine_prediction("H2", th, prof, cp1, 0.05)$pct_change_pred)
+  expect_equal(r$pct_change_pred[2], cytokine_prediction("H2", th, prof, cp1, 56)$pct_change_pred)
+  expect_false(isTRUE(all.equal(r$pct_change_pred[1], r$pct_change_pred[2])))
+  # a cytokine without a curated half-life gets no row (as before), not an error
+  r2 <- cytokine_predict_rows("H2", th, prof, cp1, data.frame(cytokine = c("TNF", "IL-17A"), day = 56))
+  expect_equal(r2$cytokine, "TNF")
+})

@@ -1,0 +1,44 @@
+"block","item","detail","observed","one_compartment","two_compartment"
+"structure summary","one-compartment","WSS 14.902; 6 parameters; residual df 16; Hessian PD TRUE; selected FALSE",NA,NA,NA
+"structure summary","two-compartment","WSS 2.501; 8 parameters; residual df 14; Hessian PD TRUE; selected TRUE",NA,NA,NA
+"row-level fit (all training rows, including C24)","Bested 2023 single NTX C0.25","",0.3,0.242829579749996,0.280025765140177
+"row-level fit (all training rows, including C24)","Bested 2023 single NTX C0.5","",0.66,0.357229477421823,0.421508418010395
+"row-level fit (all training rows, including C24)","Bested 2023 single NTX C0.75","",0.75,0.40849034569715,0.481278010932868
+"row-level fit (all training rows, including C24)","Bested 2023 single NTX C1","",0.49,0.428973871448843,0.494307040537467
+"row-level fit (all training rows, including C24)","Bested 2023 single BN C0.25","",1.83,2.04514372181669,1.62332722485122
+"row-level fit (all training rows, including C24)","Bested 2023 single BN C0.5","",4.61,3.02013871114714,2.60151206106936
+"row-level fit (all training rows, including C24)","Bested 2023 single BN C0.75","",6.14,3.46862587524115,3.18062718656548
+"row-level fit (all training rows, including C24)","Bested 2023 single BN C1","",4.22,3.66007827450773,3.51462874286148
+"row-level fit (all training rows, including C24)","Bested 2023 daily NTX Css13h","",0.33,0.486906760586057,0.414241673511841
+"row-level fit (all training rows, including C24)","Bested 2023 daily BN Css13h","",5.29,4.80427083925139,4.88437928120273
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX Cmax","",43.6,18.2356791324291,44.1831818493825
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX Tmax","",1,1.28474539082672,0.975270342134373
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN Cmax","",87.2,81.1207447932625,82.6106050284505
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN Tmax","",2,1.40379575042221,1.89727399665375
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX thalf","",10.3,8.50332557554379,9.79877225956598
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN thalf","",12.7,11.4950059851937,11.209063224822
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX C24","",2.1,2.94697083030683,2.09581173832337
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN C24","",17.6,22.5284125474025,22.4474571183374
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily NTX Cmax","",46.4,21.3337830880685,46.5780403986093
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily BN Cmax","",158.4,108.574862953864,108.69320318986
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily NTX thalf","",9.7,8.50332557684324,9.79877225956641
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily BN thalf","",11.4,11.4845898679477,11.2006228030694
+"PK sensitivity fits","primary (fp 0.95 at 100 mg; fp_dose)","two-compartment; fp at 100 mg 0.95; WSS 2.50; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","fp at 100 mg fixed at 0.90 (primary 0.95)","two-compartment; fp at 100 mg 0.90; WSS 2.59; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","fp at 100 mg fixed at 0.99 (primary 0.95)","two-compartment; fp at 100 mg 0.99; WSS 2.44; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","terminal-phase sensitivity (Verebey 2.4 -> 1.7 ng/mL, 24-72 h, appended)","two-compartment; fp at 100 mg 0.95; WSS 128.64; parent terminal half-life 23.1 h",NA,NA,NA
+"PK sensitivity fits","D50 of the fp_dose structure fixed at 10 mg (primary 30 mg; refitted)","two-compartment; fp at 100 mg 0.95; WSS 2.74; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","D50 of the fp_dose structure fixed at 100 mg (primary 30 mg; refitted)","two-compartment; fp at 100 mg 0.95; WSS 2.50; parent terminal half-life 9.8 h",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","primary (D50 30 mg, Bested day-21 CV 0.8) | linear","WSS 7.10 (Verebey 2.96, Bested 4.15); dWSS vs linear 0.00; no extra parameter; Hessian PD TRUE; worst Verebey row 1.00-fold of linear; bioavailability 0.0500 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","primary (D50 30 mg, Bested day-21 CV 0.8) | fp_dose","WSS 2.50 (Verebey 1.68, Bested 0.82); dWSS vs linear 4.60; fp0 0.9952 (SE logit 2.06); Hessian PD TRUE; worst Verebey row 1.01-fold of linear; bioavailability 0.0124 at 4.5 mg, 0.0500 at 100 mg; ADOPTED",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","primary (D50 30 mg, Bested day-21 CV 0.8) | parent_loss","WSS 2.60 (Verebey 1.69, Bested 0.90); dWSS vs linear 4.51; floss0 0.9028 (SE logit 2.24); Hessian PD TRUE; worst Verebey row 1.02-fold of linear; bioavailability 0.0125 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","D50 10 mg | fp_dose","WSS 2.74 (Verebey 1.75, Bested 0.99); dWSS vs linear 4.37; fp0 1 (SE logit NA); Hessian PD FALSE; worst Verebey row 1.01-fold of linear; bioavailability 0.0171 at 4.5 mg, 0.0500 at 100 mg; BOUNDARY fit",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","D50 100 mg | fp_dose","WSS 2.50 (Verebey 1.68, Bested 0.82); dWSS vs linear 4.60; fp0 0.9911 (SE logit 1.01); Hessian PD TRUE; worst Verebey row 1.01-fold of linear; bioavailability 0.0124 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","D50 10 mg | parent_loss","WSS 2.82 (Verebey 1.76, Bested 1.06); dWSS vs linear 4.28; floss0 1 (SE logit 387); Hessian PD TRUE; worst Verebey row 1.01-fold of linear; bioavailability 0.0171 at 4.5 mg, 0.0500 at 100 mg; BOUNDARY fit",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","D50 100 mg | parent_loss","WSS 2.60 (Verebey 1.69, Bested 0.90); dWSS vs linear 4.51; floss0 0.8204 (SE logit 1.21); Hessian PD TRUE; worst Verebey row 1.02-fold of linear; bioavailability 0.0125 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","Bested day-21 CV 0.5 (primary 0.8) | linear","WSS 10.11 (Verebey 4.61, Bested 5.50); dWSS vs linear 0.00; no extra parameter; Hessian PD TRUE; worst Verebey row 1.00-fold of linear; bioavailability 0.0500 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","Bested day-21 CV 0.5 (primary 0.8) | fp_dose","WSS 2.59 (Verebey 1.70, Bested 0.89); dWSS vs linear 7.53; fp0 0.9966 (SE logit 2.19); Hessian PD TRUE; worst Verebey row 1.02-fold of linear; bioavailability 0.0113 at 4.5 mg, 0.0500 at 100 mg; ADOPTED",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","Bested day-21 CV 0.5 (primary 0.8) | parent_loss","WSS 2.70 (Verebey 1.73, Bested 0.97); dWSS vs linear 7.41; floss0 0.9301 (SE logit 2.32); Hessian PD TRUE; worst Verebey row 1.02-fold of linear; bioavailability 0.0114 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","Bested day-21 CV 1.2 (primary 0.8) | linear","WSS 5.68 (Verebey 2.39, Bested 3.29); dWSS vs linear 0.00; no extra parameter; Hessian PD TRUE; worst Verebey row 1.00-fold of linear; bioavailability 0.0500 at 4.5 mg, 0.0500 at 100 mg; ADOPTED",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","Bested day-21 CV 1.2 (primary 0.8) | fp_dose","WSS 2.43 (Verebey 1.67, Bested 0.76); dWSS vs linear 3.25; fp0 0.994 (SE logit 1.97); Hessian PD TRUE; worst Verebey row 1.01-fold of linear; bioavailability 0.0135 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA
+"dose-model comparison (pk_dose_model_comparison.csv)","Bested day-21 CV 1.2 (primary 0.8) | parent_loss","WSS 2.52 (Verebey 1.68, Bested 0.84); dWSS vs linear 3.16; floss0 0.8766 (SE logit 2.22); Hessian PD TRUE; worst Verebey row 1.01-fold of linear; bioavailability 0.0136 at 4.5 mg, 0.0500 at 100 mg",NA,NA,NA

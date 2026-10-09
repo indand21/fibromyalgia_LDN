@@ -1,0 +1,64 @@
+                 stage  n      RMSE       MAE n_within_15
+1                    A 11 30.454839 25.604100           4
+2          A2 held-out  5 47.454843 44.221525           0
+3 A held-out (matched)  5 27.863654 23.311069           2
+4               A2 all 11 32.428891 23.127726           6
+5       A2 calibration  6  7.166501  5.549560           6
+6        A calibration  6 32.456518 27.514959           2
+7                J all 11  9.052940  7.081190          10
+8            J Rabiner  6 10.272065  7.419093           5
+9       J Lee + Weerts  5  7.326950  6.675707           5
+                                            rows       wSSE
+1   all rows (held-out: stage A fits no PET row) 102.048693
+2                     held-out rows only (n = 5) 126.936160
+3              same held-out rows as A2 held-out  38.843158
+4          all rows (6 calibration + 5 held-out) 130.017684
+5             calibration rows (Rabiner; fitted)   3.081524
+6 calibration rows (Rabiner; not fitted under A)  63.205535
+7      all rows (all are calibration data for J)   9.688056
+8                     Rabiner rows (calibration)   6.330920
+9    Lee 1988 and Weerts 2008 rows (calibration)   3.357136
+    keq      wsse      rmse  kd_scale log_kd_scale_se  koff_scale
+0.5 0.5 19.990004 13.392999 2.0100384       0.2470596 0.009876781
+2   2.0  9.688056  9.052940 1.6854656       0.3529678 0.003126651
+8   8.0  8.649808  8.851238 0.7935809       0.3780976 0.001209224
+    log_koff_scale_se hessian_pd Kd_NTX_nM Kd_BN_nM koff_NTX_per_h
+0.5         0.2031180       TRUE 0.9454363 4.261281     0.20741240
+2           0.2945120       TRUE 0.7927711 3.573187     0.06565966
+8           0.2781429       TRUE 0.3732666 1.682392     0.02539370
+    koff_BN_per_h mean_ss_occupancy_1.5mg mean_ss_occupancy_4.5mg
+0.5   0.019753562               0.4467590               0.6981148
+2     0.006253301               0.4944378               0.7392715
+8     0.002418447               0.6760418               0.8589460
+    mean_ss_occupancy_6mg n_starts start_wsse_spread adopted
+0.5             0.7520759        2      1.982187e-06   FALSE
+2               0.7879921        2      1.649786e-06    TRUE
+8               0.8887405        2      2.350297e-07   FALSE
+  stage model_ed50_mg time_h rabiner_ed50_mg rabiner_lo95 rabiner_hi95
+1     A     0.6638879      4             5.6         3.65         7.54
+2    A2     5.4163786      4             5.6         3.65         7.54
+3     J     5.3223379      4             5.6         3.65         7.54
+  ratio_model_to_rabiner within_rabiner_ci
+1              0.1185514             FALSE
+2              0.9672105              TRUE
+3              0.9504175              TRUE
+  stage dose_mg uncertainty_source mean_RO_point mean_RO_median mean_RO_lo95
+1     J     1.5       binding_only     0.4944378      0.4892476    0.3298247
+2     J     4.5       binding_only     0.7392715      0.7351488    0.5898656
+3     J     6.0       binding_only     0.7879921      0.7845302    0.6538154
+4     J     1.5     binding_and_pk     0.4944378      0.4864767    0.3256653
+5     J     4.5     binding_and_pk     0.7392715      0.7333688    0.5844816
+6     J     6.0     binding_and_pk     0.7879921      0.7833377    0.6488004
+7     J     1.5    keq_sensitivity     0.4944378             NA    0.4467590
+8     J     4.5    keq_sensitivity     0.7392715             NA    0.6981148
+9     J     6.0    keq_sensitivity     0.7879921             NA    0.7520759
+  mean_RO_hi95 n_draws
+1    0.6629529     500
+2    0.8501595     500
+3    0.8809976     500
+4    0.6586104     500
+5    0.8478583     500
+6    0.8795247     500
+7    0.6760418       3
+8    0.8589460       3
+9    0.8887405       3

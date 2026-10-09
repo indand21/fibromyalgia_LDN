@@ -1,0 +1,19 @@
+"block","item","detail","observed","one_compartment","two_compartment"
+"structure summary","one-compartment","WSS 13.870; 5 parameters; residual df 7; Hessian PD TRUE; selected FALSE",NA,NA,NA
+"structure summary","two-compartment","WSS 1.596; 7 parameters; residual df 5; Hessian PD TRUE; selected TRUE",NA,NA,NA
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX Cmax","",43.6,18.1425772569259,43.947497496229
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX Tmax","",1,1.30252713623711,0.997161608008735
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN Cmax","",87.2,77.7252159651588,78.4130255620749
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN Tmax","",2,1.42594344814761,1.95753694854806
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX thalf","",10.3,8.52163572804464,9.79232903468552
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN thalf","",12.7,11.5948833822744,11.3267690109273
+"row-level fit (all training rows, including C24)","Verebey 1976 single NTX C24","",2.1,2.94922590891749,2.09905773434898
+"row-level fit (all training rows, including C24)","Verebey 1976 single BN C24","",17.6,21.8702474195501,21.7212341791771
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily NTX Cmax","",46.4,21.2415700815967,46.3416588916606
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily BN Cmax","",158.4,104.468758197195,103.717480368119
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily NTX thalf","",9.7,8.52163572821253,9.79232903468552
+"row-level fit (all training rows, including C24)","Verebey 1976 chronic daily BN thalf","",11.4,11.5843763736145,11.3180191918977
+"PK sensitivity fits","primary (fp 0.95)","two-compartment; fp 0.95; WSS 1.60; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","fp fixed at 0.90 (primary 0.95)","two-compartment; fp 0.90; WSS 1.75; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","fp fixed at 0.99 (primary 0.95)","two-compartment; fp 0.99; WSS 1.49; parent terminal half-life 9.8 h",NA,NA,NA
+"PK sensitivity fits","terminal-phase sensitivity (Verebey 2.4 -> 1.7 ng/mL, 24-72 h, appended)","two-compartment; fp 0.95; WSS 127.80; parent terminal half-life 23.1 h",NA,NA,NA

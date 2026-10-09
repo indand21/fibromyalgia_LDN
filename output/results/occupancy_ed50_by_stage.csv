@@ -1,0 +1,4 @@
+"stage","model_ed50_mg","time_h","rabiner_ed50_mg","rabiner_lo95","rabiner_hi95","ratio_model_to_rabiner","within_rabiner_ci","comparison_independent","note"
+"A",1.00164325113843,4,5.6,3.65,7.54,0.178864866274721,FALSE,TRUE,"independent: stage A fits no PET row"
+"A2",5.54128605370704,4,5.6,3.65,7.54,0.9895153667334,TRUE,FALSE,"NOT independent: the Rabiner ED50 summarises the Rabiner scans used to calibrate A2's Kd scale"
+"J",5.20208200895473,4,5.6,3.65,7.54,0.928943215884774,TRUE,FALSE,"NOT independent: the Rabiner ED50 summarises the Rabiner scans used to calibrate stage J"

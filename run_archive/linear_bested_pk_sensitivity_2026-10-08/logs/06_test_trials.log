@@ -1,0 +1,14 @@
+INNOVA change rows re-derived from innova_nrs_levels.csv: 6 rows agree within rounding
+  hypothesis elpd_primary mcse_elpd_primary
+1         H0   -0.6690123       0.001460795
+2         H1   -2.3719629       0.055363470
+3         H2   -0.6687574       0.001459455
+4         H3   -2.4659070       0.065795762
+  elpd_all_days_secondary_nonindependent elpd_sensitivity_adjusted_innova
+1                             -0.9178452                        -1.110053
+2                             -5.0541488                        -3.080020
+3                             -0.9175150                        -1.109429
+4                             -4.9263164                        -3.066931
+INNOVA diff_nrs days scored per hypothesis:
+          H0           H1           H2           H3 
+"90,180,365" "90,180,365" "90,180,365" "90,180,365" 

@@ -1,0 +1,17 @@
+== 01_fit_pk 20:24
+   ok 103 min
+== 02_binding_bottomup 22:07
+   ok 0 min
+== 03_test_pet 22:08
+   ok 41 min
+== 04_fit_hypotheses 22:49
+   ok 11 min
+== 05_calibrate_variability 23:00
+   ok 0 min
+== 05b_younger_floor_study 23:00
+   ok 0 min
+== 06_test_trials 23:01
+   ok 1 min
+== 08_test_cytokines 23:02
+   ok 0 min
+ALL_DONE

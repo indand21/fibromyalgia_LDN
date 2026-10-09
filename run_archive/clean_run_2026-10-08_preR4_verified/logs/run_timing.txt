@@ -1,0 +1,25 @@
+pass	step	seconds	status	note	finished_at
+primary	01_fit_pk.R	1435.3	ok		2026-10-08T01:38:42
+primary	02_binding_bottomup.R	18.9	ok		2026-10-08T01:39:01
+primary	03_test_pet.R	3749.5	ok		2026-10-08T02:41:30
+primary	04_fit_hypotheses.R	1029.5	ok		2026-10-08T02:58:40
+primary	05_calibrate_variability.R	3.9	ok		2026-10-08T02:58:44
+primary	05b_younger_floor_study.R	39.2	ok		2026-10-08T02:59:23
+primary	06_test_trials.R	87.2	ok		2026-10-08T03:00:50
+primary	07_virtual_trials.R	3828.8	ok		2026-10-08T04:04:39
+primary	08_test_cytokines.R	10.6	ok		2026-10-08T04:04:49
+primary	09_sobol.R	580.3	ok		2026-10-08T04:14:30
+primary	10_figures.R	46.7	ok		2026-10-08T04:15:16
+primary	11_tables.R	0.7	ok		2026-10-08T04:15:17
+sensitivity_A2	04_fit_hypotheses.R	845.3	ok		2026-10-08T04:29:26
+sensitivity_A2	05_calibrate_variability.R	4	ok		2026-10-08T04:29:31
+sensitivity_A2	06_test_trials.R	90.4	ok		2026-10-08T04:31:01
+sensitivity_A2	07_virtual_trials.R	1401.5	ok	V5_SCRIPT07_MODE=summary	2026-10-08T04:54:22
+sensitivity_A2	08_test_cytokines.R	5.4	ok		2026-10-08T04:54:28
+sensitivity_A	04_fit_hypotheses.R	746.5	ok		2026-10-08T05:07:02
+sensitivity_A	05_calibrate_variability.R	3.8	ok		2026-10-08T05:07:06
+sensitivity_A	06_test_trials.R	82.9	ok		2026-10-08T05:08:28
+sensitivity_A	07_virtual_trials.R	1397	ok	V5_SCRIPT07_MODE=summary	2026-10-08T05:31:45
+sensitivity_A	08_test_cytokines.R	5.4	ok		2026-10-08T05:31:51
+summary	sensitivity_summary.csv	0.1	ok		2026-10-08T05:31:55
+total	run_all.R	15428.2	ok		2026-10-08T05:31:55

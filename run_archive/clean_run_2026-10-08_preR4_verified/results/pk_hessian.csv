@@ -1,0 +1,15 @@
+"fit","eigenvalue","positive_definite"
+"initial (fp fixed, all other parameters free)",155.167944831761,TRUE
+"initial (fp fixed, all other parameters free)",115.955253297596,TRUE
+"initial (fp fixed, all other parameters free)",35.3856735859651,TRUE
+"initial (fp fixed, all other parameters free)",18.5693844609111,TRUE
+"initial (fp fixed, all other parameters free)",13.2798590049255,TRUE
+"initial (fp fixed, all other parameters free)",4.084996514132,TRUE
+"initial (fp fixed, all other parameters free)",0.475691931399359,TRUE
+"final",155.167944831761,TRUE
+"final",115.955253297596,TRUE
+"final",35.3856735859651,TRUE
+"final",18.5693844609111,TRUE
+"final",13.2798590049255,TRUE
+"final",4.084996514132,TRUE
+"final",0.475691931399359,TRUE

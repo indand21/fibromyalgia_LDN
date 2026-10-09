@@ -1,0 +1,16 @@
+Warning message:
+no curated half-life, so no prediction for: IL-1beta, IL-17A, TGF-beta 
+                            measure diff  lo95 hi95   unit point_favours
+1  pressure_pain_tolerance_left_leg -2.6  -5.8  0.5    kPa       placebo
+2 pressure_pain_tolerance_right_leg -0.5  -3.3  2.2    kPa       placebo
+3        temporal_summation_of_pain -0.1  -0.9  0.7 VAS_cm           LDN
+4       conditioned_pain_modulation  2.0   0.4  3.7    kPa           LDN
+5                   chair_stand_30s  0.3  -0.5  1.1  count           LDN
+6                     arm_hold_time  3.7 -14.2 21.5      s           LDN
+  ci_excludes_zero
+1            FALSE
+2            FALSE
+3            FALSE
+4             TRUE
+5            FALSE
+6            FALSE

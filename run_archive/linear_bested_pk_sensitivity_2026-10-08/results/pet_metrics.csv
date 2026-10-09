@@ -1,0 +1,10 @@
+"stage","n","RMSE","MAE","n_within_15","rows","wSSE"
+"A",11,30.4548390635426,25.60409968774,4,"all rows (held-out: stage A fits no PET row)",102.048692835754
+"A2 held-out",5,47.4548427394959,44.221524585927,0,"held-out rows only (n = 5)",126.936159673753
+"A held-out (matched)",5,27.8636535214945,23.3110685179917,2,"same held-out rows as A2 held-out",38.8431577515576
+"A2 all",11,32.4288913398893,23.1277258420694,6,"all rows (6 calibration + 5 held-out)",130.017683991016
+"A2 calibration",6,7.16650114219383,5.54956022218807,6,"calibration rows (Rabiner; fitted)",3.08152431726393
+"A calibration",6,32.4565183705307,27.5149589958637,2,"calibration rows (Rabiner; not fitted under A)",63.205535084196
+"J all",11,9.05293995094284,7.08119000910927,10,"all rows (all are calibration data for J)",9.68805588002382
+"J Rabiner",6,10.2720654938179,7.41909282943189,5,"Rabiner rows (calibration)",6.33091977055703
+"J Lee + Weerts",5,7.32694973714771,6.67570662472213,5,"Lee 1988 and Weerts 2008 rows (calibration)",3.35713610946679

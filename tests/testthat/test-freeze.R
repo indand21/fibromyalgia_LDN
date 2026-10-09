@@ -86,3 +86,60 @@ test_that("pinning a test file does not block later freezing of other stages", {
   freeze_stage("A", train, manifest = m); read_test_data(f, "A", manifest = m)
   expect_silent(freeze_stage("B", t2, manifest = m))
 })
+
+test_that("PET script reads the Rabiner ED50 only through read_test_data (so it is hashed under stage T)", {
+  s <- readLines(file.path("..", "..", "scripts", "03_test_pet.R"))
+  hit <- grepl("pet_ed50", s, fixed = TRUE)
+  expect_true(any(hit))
+  expect_true(all(grepl("read_test_data(\"data/test/pet_ed50.csv\", \"A\")", s[hit], fixed = TRUE)))
+})
+
+test_that("PET script adopts stage J and freezes it with its inputs and outputs", {
+  s <- paste(readLines(file.path("..", "..", "scripts", "03_test_pet.R")), collapse = "\n")
+  expect_match(s, "freeze_stage(\"J\"", fixed = TRUE)
+  expect_match(s, "binding_params_J.rds", fixed = TRUE)
+  expect_match(s, "steady_state_occupancy_by_stage.csv", fixed = TRUE)
+  expect_match(s, "occupancy_uncertainty_J.csv", fixed = TRUE)
+})
+
+test_that("PET script writes the keq range and the PK sensitivity, and freezes the sensitivity inputs with stage J", {
+  s <- paste(readLines(file.path("..", "..", "scripts", "03_test_pet.R")), collapse = "\n")
+  expect_match(s, "keq_sensitivity", fixed = TRUE)
+  expect_match(s, "occupancy_sensitivity_J.csv", fixed = TRUE)
+  expect_match(s, "\"data/training/pk_summary_sensitivity_terminal.csv\", sens_files))", fixed = TRUE)
+  p1 <- paste(readLines(file.path("..", "..", "scripts", "01_fit_pk.R")), collapse = "\n")
+  expect_match(p1, "FP_FIXED <- 0.95", fixed = TRUE)
+  expect_false(grepl("rbind(obs, read_dataset(\"data/training/pk_summary_sensitivity_terminal.csv\"))\nsel <-", p1, fixed = TRUE))
+})
+
+# ---- R3a item 5 (review I11): the INNOVA level file and the QST file are read through read_test_data ----
+test_that("script 06 re-derives the INNOVA change rows from the level file read through read_test_data", {
+  s <- readLines(file.path("..", "..", "scripts", "06_test_trials.R"))
+  expect_true(any(grepl('read_test_data("data/test/innova_nrs_levels.csv", "B")', s, fixed = TRUE)))
+  expect_true(any(grepl("check_innova_change(", s, fixed = TRUE)))
+})
+
+test_that("script 08 reports the QST table from qst_final.csv read through read_test_data", {
+  s <- readLines(file.path("..", "..", "scripts", "08_test_cytokines.R"))
+  expect_true(any(grepl('read_test_data("data/test/qst_final.csv", "B")', s, fixed = TRUE)))
+  expect_true(any(grepl("qst_summary(", s, fixed = TRUE)))
+})
+
+# ---- R3a item 7: the Younger floor study is a pipeline script and reads no test data ----
+test_that("the Younger floor study script exists, reads no test data and uses the pipeline's own functions", {
+  f <- file.path("..", "..", "scripts", "05b_younger_floor_study.R")
+  expect_true(file.exists(f))
+  s <- readLines(f)
+  expect_false(any(grepl("data/test|data\\\\test|read_test_data", s)))
+  txt <- paste(s, collapse = "\n")
+  for (fn in c("calibrate_omegas(", "match_trunc_parent(", "younger_floor_stability.csv"))
+    expect_true(grepl(fn, txt, fixed = TRUE), info = fn)
+  expect_false(grepl("set.seed(", txt, fixed = TRUE))           # no hand-duplicated RNG order
+})
+
+
+# ---- R3a fix round 1: post-hoc analyses are labelled exploratory (global constraints) ----
+test_that("the responder-scoring definition text in script 07 labels it exploratory", {
+  s <- paste(readLines(file.path("..", "..", "scripts", "07_virtual_trials.R")), collapse = "\n")
+  expect_true(grepl("EXPLORATORY (added after the held-out results were seen", s, fixed = TRUE))
+})

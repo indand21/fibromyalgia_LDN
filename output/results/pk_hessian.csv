@@ -1,0 +1,17 @@
+"fit","eigenvalue","positive_definite"
+"initial (before the identifiability gate)",155.5306099074,TRUE
+"initial (before the identifiability gate)",115.203477261749,TRUE
+"initial (before the identifiability gate)",35.3832323406104,TRUE
+"initial (before the identifiability gate)",21.8082136199452,TRUE
+"initial (before the identifiability gate)",15.2365641721255,TRUE
+"initial (before the identifiability gate)",5.32521187753155,TRUE
+"initial (before the identifiability gate)",0.626543693203982,TRUE
+"initial (before the identifiability gate)",0.215067818217833,TRUE
+"final",155.5306099074,TRUE
+"final",115.203477261749,TRUE
+"final",35.3832323406104,TRUE
+"final",21.8082136199452,TRUE
+"final",15.2365641721255,TRUE
+"final",5.32521187753155,TRUE
+"final",0.626543693203982,TRUE
+"final",0.215067818217833,TRUE

@@ -1,0 +1,15 @@
+"sensitivity","study","regimen","analyte","stat","mean","pred"
+"terminal","Verebey 1976","single","NTX","Cmax",43.6,48.7479695196097
+"terminal","Verebey 1976","single","NTX","Tmax",1,1.05159263075889
+"terminal","Verebey 1976","single","BN","Cmax",87.2,82.9342596488075
+"terminal","Verebey 1976","single","BN","Tmax",2,1.92746744047865
+"terminal","Verebey 1976","single","NTX","thalf",10.3,23.0852126972269
+"terminal","Verebey 1976","single","BN","thalf",12.7,13.2836796727454
+"terminal","Verebey 1976","single","NTX","C24",2.1,2.12112914312418
+"terminal","Verebey 1976","single","BN","C24",17.6,20.437063791526
+"terminal","Verebey 1976 chronic","daily","NTX","Cmax",46.4,52.746745949809
+"terminal","Verebey 1976 chronic","daily","BN","Cmax",158.4,106.187364648008
+"terminal","Verebey 1976 chronic","daily","NTX","thalf",9.7,23.0852126972266
+"terminal","Verebey 1976 chronic","daily","BN","thalf",11.4,14.398576439161
+"terminal","Verebey 1976 chronic","daily","NTX","C24",2.4,4.12781147112225
+"terminal","Verebey 1976 chronic","daily","NTX","C72",1.7,0.976200189099384

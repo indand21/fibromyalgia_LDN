@@ -1,0 +1,36 @@
+Structure: two-compartment (WSS one-compartment 13.870 [Hessian PD TRUE], two-compartment 1.596 [Hessian PD TRUE]; two-compartment adopted only if WSS drops by > 5.99); see pk_structure_summary.csv and pk_structure_comparison.csv
+C24 (24 h after the acute dose): observed NTX 2.1, BN 17.6 ng/mL; one-compartment predicts NTX 2.95, BN 21.87; two-compartment predicts NTX 2.10, BN 21.72. At least one structure reproduces both 24 h values within a factor of 1.5.
+Objective statistics: C24, Cmax, thalf, Tmax; CV floor 0.10 (Tmax 0.25)
+Final WSS 1.5960; Hessian eigenvalues (of hessian/2): 155.2, 116, 35.39, 18.57, 13.28, 4.085, 0.4757; positive definite: TRUE
+ka 1.860 per h (absorption half-life 22.4 min)
+Observations 12 (8 single-dose, 4 once-daily at steady state; regimen column of pk_summary.csv) and 12 nominally distinct (regimen, analyte, stat) combinations, but only 11 distinct predicted values to 6 significant figures and 10 to 3 (the single-dose and steady-state terminal half-lives are the same quantity in a linear model: NTX coincides exactly, BN to 0.1%). With 7 fitted parameters: nominal residual degrees of freedom 5, EFFECTIVE 4 (3 at 3 significant figures).
+Tmax check: NTX observed 1.00 h, predicted 1.00 h; BN observed 2.00 h, predicted 1.96 h
+Parent naltrexone disposition half-lives: distribution 1.23 h, terminal 9.79 h; smallest Hessian eigenvalue 0.476 (largest 155)
+Fixed parameters: fp fixed at 0.95: the approved naltrexone labelling gives oral bioavailability of 5 to 40 per cent, i.e. a systemic parent fraction (1 - fp) of roughly 0.05 to 0.40; 0.95 sits at the UPPER EDGE of that range (1 - fp = 0.05) and inside the region where the weighted SSE is flat (change <= 0.29 for fp 0.9 to 0.999 in the free fit). Occupancy sensitivity at fp = 0.90 and 0.99 is reported (pk_fit_sens_fp090.rds, pk_fit_sens_fp099.rds) and is immaterial (occupancy moves by at most 0.001).
+Limitation (stated; no structure added): the chronic (once-daily, steady-state) 6-beta-naltrexol Cmax is under-predicted, 103.7 vs observed 158.4 ng/mL (0.65-fold). With the 24 h concentrations in the fit, linear kinetics cannot also produce the observed 1.8-fold rise of the chronic over the acute peak; Verebey 1976 itself reports no trough accumulation. The observation's CV (0.57) keeps its weight low.
+Unbound fraction of 6-beta-naltrexol: fu_BN = 0.79 is taken EQUAL TO THE PARENT's fu_NTX by fallback: no 6-beta-naltrexol plasma-protein-binding value was found (data/README.md 'Not found' list). It is an assumption, not a measurement, and it scales every unbound 6-beta-naltrexol concentration.
+  sensitivity
+1     primary
+2       fp090
+3       fp099
+4    terminal
+                                                                     label
+1                                                        primary (fp 0.95)
+2                                          fp fixed at 0.90 (primary 0.95)
+3                                          fp fixed at 0.99 (primary 0.95)
+4 terminal-phase sensitivity (Verebey 2.4 -> 1.7 ng/mL, 24-72 h, appended)
+        structure   fp        wss hessian_pd min_eigenvalue       ka
+1 two-compartment 0.95   1.596025       TRUE      0.4756919 1.859777
+2 two-compartment 0.90   1.750995       TRUE      0.4306166 1.936102
+3 two-compartment 0.99   1.488145       TRUE      0.5117870 1.806690
+4 two-compartment 0.95 127.801237       TRUE      0.9704429 1.843105
+  CL_apparent V1_apparent parent_t_half_distribution_h parent_t_half_terminal_h
+1    383.7157    1425.386                     1.227055                 9.792329
+2    379.9789    1462.778                     1.297489                 9.825084
+3    386.2638    1398.166                     1.178957                 9.770142
+4    328.9490    1333.414                     1.581245                23.085213
+       CLm       Vm
+1 68.22892 1100.026
+2 67.89753 1072.190
+3 68.47740 1121.423
+4 69.07009 1031.219

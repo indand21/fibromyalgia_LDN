@@ -1,0 +1,48 @@
+        trial       arm day mean   se   status
+1 younger2013   placebo  28 18.0 5.26 included
+2 younger2013 ldn_4.5mg  84 28.8 4.53 included
+3 younger2009   placebo  14  2.3   NA excluded
+4 younger2009 ldn_4.5mg  56 32.5   NA excluded
+                                                                                                                                                                   reason
+1                                                                                                                                                                        
+2                                                                                                                                                                        
+3 no dispersion reported in source; endpoint mismatch: overall fibromyalgia symptom severity 0-100 VAS, not a pain-specific score (efficacy_training.csv location column)
+4 no dispersion reported in source; endpoint mismatch: overall fibromyalgia symptom severity 0-100 VAS, not a pain-specific score (efficacy_training.csv location column)
+16 chains (4 hypotheses x 4 chains) on 10 worker(s) in 15.4 min
+Warning messages:
+1: Some Pareto k diagnostic values are too high. See help('pareto-k-diagnostic') for details.
+ 
+2: Some Pareto k diagnostic values are too high. See help('pareto-k-diagnostic') for details.
+ 
+3: Some Pareto k diagnostic values are too high. See help('pareto-k-diagnostic') for details.
+ 
+4: Some Pareto k diagnostic values are too high. See help('pareto-k-diagnostic') for details.
+ 
+  hypothesis n_free_parameters     p_loo prior_determined_fraction max_pareto_k
+1         H0                 6 1.4149829                 0.7641695    0.8044508
+2         H1                 9 0.5381557                 0.9402049    0.7295999
+3         H2                 7 1.4578975                 0.7917289    0.9395896
+4         H3                 8 0.9417688                 0.8822789    0.7508839
+  p_loo_reliable
+1          FALSE
+2          FALSE
+3          FALSE
+4          FALSE
+   hypothesis mu_p_post_sd mu_p_prior_sd tau_post_mean tau_post_sd
+H0         H0       0.1229        0.1206        0.5281      0.3056
+H1         H1       0.1187        0.1206        0.3910      0.2897
+H2         H2       0.1188        0.1206        0.5185      0.3037
+H3         H3       0.1228        0.1206        0.4181      0.2866
+   log_kpbo_post_sd log_kpbo_prior_sd
+H0          0.08004           0.07858
+H1          0.07710           0.07858
+H2          0.07974           0.07858
+H3          0.07856           0.07858
+   hypothesis peak_dose_mg        peak_position model_ED50_mg model_ED95_mg
+H1         H1            6 highest dose on grid            NA            NA
+H2         H2            6 highest dose on grid            NA            NA
+H3         H3            6 highest dose on grid            NA            NA
+   observed_ED95_mg
+H1              5.4
+H2              5.4
+H3              5.4

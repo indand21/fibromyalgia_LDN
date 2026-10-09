@@ -58,7 +58,11 @@ simulate_arm <- function(hyp, theta, schedule, n_days, cache, Pmax) {
 }
 
 arm_outcome <- function(sim, day, outcome, baseline_nrs) {
-  rel <- sim$rel[match(day, sim$day)]
+  i <- match(day, sim$day)
+  # review M5: a day outside the simulation used to return NA silently
+  if (anyNA(i)) stop("arm_outcome: day ", paste(day[is.na(i)], collapse = ", "), " was not simulated (simulation covers days ",
+                     min(sim$day), "-", max(sim$day), ")")
+  rel <- sim$rel[i]
   switch(outcome,
     pct_reduction = 100 * (1 - rel),
     change_nrs = baseline_nrs * (rel - 1),

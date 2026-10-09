@@ -1,7 +1,10 @@
-"stage","n","RMSE","MAE","n_within_15","rows"
-"A",11,31.4369057016255,25.0999925259254,4,"all rows"
-"A2 held-out",5,46.1591171951011,42.8384087486523,0,"held-out rows only (n = 5)"
-"A held-out (matched)",5,22.6924509236521,17.5816586232507,2,"same held-out rows as A2 held-out"
-"A2 all",11,31.5702815868132,22.4774964907049,6,"all rows (6 calibration + 5 held-out)"
-"A2 calibration",6,7.19014340401804,5.51006960908211,6,"calibration rows (Rabiner; fitted)"
-"A calibration",6,37.184971866804,31.3652707781543,2,"calibration rows (Rabiner; not fitted under A)"
+"stage","n","RMSE","MAE","n_within_15","rows","wSSE"
+"A",11,28.8183640726218,24.459557440636,4,"all rows (held-out: stage A fits no PET row)",91.3680089108451
+"A2 held-out",5,45.7297278224281,42.3293605977463,0,"held-out rows only (n = 5)",114.280623288079
+"A held-out (matched)",5,28.2858725289038,23.7452230947571,2,"same held-out rows as A2 held-out",40.0177462864754
+"A2 all",11,31.3712264114617,22.5183517184565,6,"all rows (6 calibration + 5 held-out)",117.977146073922
+"A2 calibration",6,7.84912180421408,6.00917765238168,6,"calibration rows (Rabiner; fitted)",3.69652278584333
+"A calibration",6,29.2547040731258,25.0548360622017,2,"calibration rows (Rabiner; not fitted under A)",51.3502626243697
+"J all",11,11.5528057336421,7.22748681044083,10,"all rows (all are calibration data for J)",14.8260598858219
+"J Rabiner",6,15.4836413097634,11.3155295385738,5,"Rabiner rows (calibration)",14.3845888925648
+"J Lee + Weerts",5,2.43645784923657,2.3218355366813,5,"Lee 1988 and Weerts 2008 rows (calibration)",0.441470993257086

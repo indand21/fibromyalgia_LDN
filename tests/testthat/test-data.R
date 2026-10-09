@@ -6,6 +6,9 @@ test_that("read_dataset rejects missing or vague provenance", {
   expect_error(read_dataset(f), "verified")
   write.csv(data.frame(x = 1), f, row.names = FALSE)
   expect_error(read_dataset(f), "provenance")
+  # R4 fix round 1: values read off a figure are labelled `digitised` (Bested 2023 Fig 4)
+  write.csv(data.frame(x = 1, source = "A 2020", location = "Fig 4", verified = "digitised"), f, row.names = FALSE)
+  expect_s3_class(read_dataset(f), "data.frame")
 })
 
 test_that("parse_schedule handles single dose, placebo and titration", {
@@ -32,7 +35,9 @@ rd_data <- function(...) {
 test_that("pk_summary.csv has finite doses and valid stat/analyte values", {
   d <- rd_data("training", "pk_summary.csv")
   expect_true(all(is.finite(d$dose_mg)))
-  expect_true(all(d$stat %in% c("Cmax", "Tmax", "AUCinf", "thalf")))
+  # R4: C0.5 (concentration at 30 min, Bested 2023 day 1) and Css13h (mean over 1-3 h window at steady
+  # state, Bested 2023 day 21) added as new stat types; see R/pk.R PK_STATS.
+  expect_true(all(d$stat %in% PK_STATS))
   expect_true(all(d$analyte %in% c("NTX", "BN")))
 })
 
@@ -100,4 +105,104 @@ test_that("the curated TLR4 IC50 is consumed as nM", {
   bc <- rd_data("params", "binding_constants.csv")
   expect_equal(pool_binding(bc, "NTX", "TLR4", c("IC50", "Kd"))$value, 105500)
   expect_equal(pool_binding(bc, "NTX", "MOR", "Ki")$unit, "nM")
+})
+
+test_that("pk_summary.csv carries a valid dosing regimen on every row", {
+  d <- rd_data("training", "pk_summary.csv")
+  expect_true("regimen" %in% names(d))
+  expect_true(all(d$regimen %in% c("single", "daily")))
+  expect_true(all(d$regimen[grepl("chronic", d$study)] == "daily"))
+  # R4: Bested 2023 daily rows (Css13h, day-21 steady state) also have regimen "daily"
+  # though the study name has no "chronic" substring; test updated to reflect this.
+  expect_true(all(d$regimen[!grepl("chronic", d$study) & !grepl("Bested", d$study)] == "single"))
+  expect_true(all(d$regimen[grepl("Bested", d$study) & d$stat == "Css13h"] == "daily"))
+  expect_true(all(d$regimen[grepl("Bested", d$study) & d$stat == "C0.5"] == "single"))
+})
+
+test_that("pk_summary.csv carries the Verebey 1976 24 h concentrations after the acute dose", {
+  d <- rd_data("training", "pk_summary.csv"); c24 <- d[d$stat == "C24", ]
+  expect_equal(nrow(c24[c24$regimen == "single", ]), 2)
+  expect_equal(c24$mean[c24$analyte == "NTX" & c24$regimen == "single"], 2.1)
+  expect_equal(c24$mean[c24$analyte == "BN" & c24$regimen == "single"], 17.6)
+  expect_true(all(c24$unit == "ng/mL"))
+})
+
+test_that("the terminal-phase SENSITIVITY rows live in their own file, never in the primary PK file", {
+  s <- rd_data("training", "pk_summary_sensitivity_terminal.csv")
+  expect_equal(nrow(s), 2)
+  expect_equal(sort(s$stat), c("C24", "C72")); expect_equal(s$mean[s$stat == "C24"], 2.4); expect_equal(s$mean[s$stat == "C72"], 1.7)
+  expect_true(all(s$analyte == "NTX" & s$regimen == "daily" & is.na(s$sd) & s$verified == "yes"))
+  expect_true(all(grepl("which dose", s$location)))
+  expect_false("C72" %in% rd_data("training", "pk_summary.csv")$stat)
+  expect_identical(names(s), names(rd_data("training", "pk_summary.csv")))
+})
+
+# ---- R4 fix round 1 (review C2, I5): Bested 2023 rows weighted by their reported dispersion, curation corrected ----
+test_that("the Bested 2023 day-1 profile carries digitised means and SDs at 15-60 min, down-weighted to one observation per analyte", {
+  d <- rd_data("training", "pk_summary.csv"); b <- d[d$study == "Bested 2023", ]
+  prof <- b[b$regimen == "single", ]
+  expect_equal(nrow(prof), 8)
+  for (an in c("NTX", "BN")) {
+    x <- prof[prof$analyte == an, ]
+    expect_setequal(x$stat, c("C0.25", "C0.5", "C0.75", "C1"))
+    expect_true(all(is.finite(x$sd) & x$sd > 0))                  # dispersion read off the figure, never the CV floor
+    expect_equal(sum(x$obj_weight), 1)                              # repeated measures on the same subjects: 4 rows count as 1
+    expect_true(all(x$verified == "digitised"))
+    expect_true(all(grepl("digitised", x$location)))
+  }
+  expect_equal(prof$mean[prof$analyte == "NTX" & prof$stat == "C0.5"], 0.66)   # stated in the text: used, not the plotted value
+  expect_equal(prof$mean[prof$analyte == "BN" & prof$stat == "C0.5"], 4.61)
+  expect_match(prof$location[prof$analyte == "BN" & prof$stat == "C0.5"], "conflict", ignore.case = TRUE)
+  expect_equal(prof$n[prof$stat == "C0.5"], c(37, 37))             # n at 30 min is 37 (Fig 4), not the 52 per-protocol patients
+  expect_true(all(prof$n[prof$stat == "C0.25"] == 34))
+  expect_true(all(is.na(prof$cv_assumed)))
+})
+
+test_that("the Bested 2023 day-21 medians use an assumed CV of 0.8, n not reported, with the curation corrections", {
+  d <- rd_data("training", "pk_summary.csv"); b <- d[d$study == "Bested 2023", ]
+  ss <- b[b$regimen == "daily", ]
+  expect_equal(nrow(ss), 2); expect_true(all(ss$stat == "Css13h"))
+  expect_equal(sort(ss$mean), c(0.33, 5.29))
+  expect_true(all(is.na(ss$sd))); expect_true(all(ss$cv_assumed == 0.8)); expect_true(all(ss$obj_weight == 1))
+  expect_true(all(is.na(ss$n)))
+  expect_true(all(grepl("median", ss$location)) && all(grepl("not reported", ss$location)))
+  for (r in seq_len(nrow(b))) {
+    expect_false(grepl("first treatment period|first-period", b$location[r]))   # it is a crossover
+    expect_match(b$location[r], "0.015")                                     # LOQ, Supplemental Digital Content 4
+    expect_match(b$location[r], "46 of 52")                                  # population note
+  }
+  v <- d[grepl("^Verebey", d$study), ]
+  expect_true(all(is.na(v$cv_assumed)) && all(v$obj_weight == 1))           # Verebey rows unchanged: CV = SD / mean
+})
+
+test_that("pet_occupancy.csv records the number of doses given before each scan", {
+  d <- rd_data("test", "pet_occupancy.csv")
+  expect_true("n_doses" %in% names(d))
+  expect_true(all(d$n_doses >= 1 & d$n_doses == round(d$n_doses)))
+  expect_true(all(d$n_doses[d$regimen == "single"] == 1))
+  w <- d[d$study == "Weerts 2008", ]
+  # R4 fix: n_doses changed 4→3 (internally consistent: doses on days 15/16/17, scan on day 18 at 24 h trough after day 17)
+  expect_equal(nrow(w), 1); expect_equal(w$n_doses, 3)
+  expect_match(w$location, "days 15-19")
+  expect_false(grepl("89.4|90.2|extchecks", w$location))   # R4 fix round 1 (M6): computed by script 03, not quoted from a scratch script
+})
+
+# ---- R3a item 7: the Younger floor is a modelling choice, and its provenance row says so ----
+test_that("the Younger 2013 baseline floor row is marked secondary and states it is a modelling choice", {
+  b <- read_dataset(file.path("..", "..", "data", "params", "baseline_bounds.csv"))
+  y <- b[b$trial == "younger2013", ]
+  expect_equal(nrow(y), 1)
+  expect_equal(c(y$lower_nrs, y$upper_nrs), c(0.5, 10))                     # bound value unchanged
+  expect_equal(y$verified, "secondary")
+  expect_match(y$location, "modelling choice", ignore.case = TRUE)
+  expect_match(y$location, "not an eligibility criterion", ignore.case = TRUE)
+  expect_match(y$location, "05b_younger_floor_study.R", fixed = TRUE)
+  expect_true(all(b$verified[b$trial != "younger2013"] == "yes"))          # the eligibility rows are unchanged
+})
+
+test_that("data/README.md marks pbo_emax_logit as reference-only", {
+  rd <- readLines(file.path("..", "..", "data", "README.md"), encoding = "UTF-8")
+  ln <- rd[grepl("pbo_emax_logit", rd, fixed = TRUE)]
+  expect_true(length(ln) >= 1)
+  expect_true(any(grepl("reference only", ln, ignore.case = TRUE)))
 })

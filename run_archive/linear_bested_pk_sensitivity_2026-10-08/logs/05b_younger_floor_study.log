@@ -1,0 +1,20 @@
+1000 calibrations on 10 worker(s) in 0.5 min
+ floor parent_mu parent_sigma matched noise_sd_median noise_sd_q05 noise_sd_q95
+   0.0     5.081        1.508    TRUE           13.32        11.61        42.76
+   0.5     5.077        1.515    TRUE           11.77        11.29        12.28
+   1.0     5.065        1.530    TRUE           11.44        11.07        11.77
+   1.5     5.035        1.564    TRUE           11.21        10.90        11.50
+   2.0     4.951        1.642    TRUE           11.01        10.74        11.27
+ noise_rel_lo noise_rel_hi omega_p_median omega_p_q05 omega_p_q95 omega_rel_lo
+     -0.12839      2.21012          1.922     0.07467       2.000     -0.96114
+     -0.04088      0.04336          1.950     1.89192       2.011     -0.02990
+     -0.03253      0.02880          1.965     1.90742       2.020     -0.02916
+     -0.02778      0.02529          1.975     1.91626       2.029     -0.02991
+     -0.02456      0.02357          1.983     1.92512       2.036     -0.02923
+ omega_rel_hi passes
+      0.04086  FALSE
+      0.03120   TRUE
+      0.02807   TRUE
+      0.02719   TRUE
+      0.02662   TRUE
+chosen floor (smallest candidate in {0.5, 1, 1.5, 2} meeting the rule): 0.5 

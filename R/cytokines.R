@@ -25,3 +25,13 @@ cytokine_prediction <- function(hyp, th, prof, cyt_params, day) {
   kout <- log(2) / hh$hours   # 1/h
   data.frame(cytokine = hh$cytokine, pct_change_pred = -100 * signal * (1 - exp(-kout * 24 * day)), halflife_basis = hh$basis)
 }
+
+# Predictions for every observed (cytokine, day) row at that row's OWN day (R3a, review M11: script 08 used the
+# first row's day for all rows). Cytokines without a curated half-life get no row, as in cytokine_prediction().
+cytokine_predict_rows <- function(hyp, th, prof, cyt_params, obs) {
+  days <- unique(obs$day)
+  pr <- do.call(rbind, lapply(days, function(dy) { r <- cytokine_prediction(hyp, th, prof, cyt_params, dy); r$day <- dy; r }))
+  key <- unique(obs[, c("cytokine", "day")])
+  out <- merge(key, pr, by = c("cytokine", "day"))
+  out[order(match(paste(out$cytokine, out$day), paste(obs$cytokine, obs$day))), , drop = FALSE]
+}

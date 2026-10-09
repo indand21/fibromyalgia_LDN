@@ -1,0 +1,3 @@
+Sensitivity analysis (2026-10-08): PK refitted WITH the Bested 2023 low-dose data but with the LINEAR (dose-independent fp) structure forced, then scripts 02-06 and 08 run on code at HEAD 1e7836c.
+The only code change is one line in 01_fit_pk.R (copy here: 01_fit_pk_linear_forced.R), after the adoption rule: adopted <- "linear".
+Purpose: the second side of the occupancy bracket (controller ruling F1). Script 07 (virtual trials) and 09-11 were not run. test_elpd_contrasts.csv was computed afterwards with the pipeline's elpd_contrasts() from test_predictions.csv and test_elpd_contrast_mcse.csv.

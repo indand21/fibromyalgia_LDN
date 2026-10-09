@@ -1,27 +1,72 @@
 Warning messages:
-1: In calibrate_omegas(fit, arms, cache, sd_res = sd_res) :
-  H1: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 26.34 vs 24; omega_p=2.195, omega_e=0.001; at_bound=TRUE)
-2: In calibrate_omegas(fit, arms, cache, sd_res = sd_res) :
-  H2: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 29.12 vs 24; omega_p=2, omega_e=0; at_bound=TRUE)
-3: In calibrate_omegas(fit, arms, cache, sd_res = sd_res) :
-  H3: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 24.92 vs 24; omega_p=2.267, omega_e=0.003; at_bound=TRUE)
-  hypothesis  omega_p      omega_e sd_res achieved_sd_pbo target_sd_pbo
-1         H0 1.987408 0.000000e+00   0.48        27.89996          27.9
-2         H1 2.195044 1.327813e-03   0.48        27.89999          27.9
-3         H2 1.999662 7.575184e-05   0.48        27.89996          27.9
-4         H3 2.266979 2.805366e-03   0.48        27.89990          27.9
+1: In calibrate_omegas(fits[[h]], arms, cache, sd_res = sd_res, bounds = bounds) :
+  H1: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 26.87 vs 24; omega_p=2.14, omega_e=0.009; at_bound=TRUE)
+2: In calibrate_omegas(fits[[h]], arms, cache, sd_res = sd_res, bounds = bounds) :
+  H2: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 29.09 vs 24; omega_p=1.986, omega_e=0.448; at_bound=FALSE)
+3: In calibrate_omegas(fits[[h]], arms, cache, sd_res = sd_res, bounds = bounds) :
+  H3: omega calibration did not match the target SD of % reduction (placebo achieved 27.9 vs 27.9; LDN achieved 26.4 vs 24; omega_p=2.189, omega_e=0.014; at_bound=FALSE)
+  hypothesis  omega_p     omega_e sd_res achieved_sd_pbo target_sd_pbo
+1         H0 1.983249 0.000000000   0.48        27.89997          27.9
+2         H1 2.140499 0.009023093   0.48        27.89997          27.9
+3         H2 1.986156 0.447813482   0.48        27.89997          27.9
+4         H3 2.188928 0.014367992   0.48        27.89999          27.9
   achieved_sd_ldn target_sd_ldn at_bound
 1              NA            NA    FALSE
-2        26.34429            24     TRUE
-3        29.11817            24     TRUE
-4        24.91829            24     TRUE
+2        26.86771            24     TRUE
+3        29.08747            24    FALSE
+4        26.40158            24    FALSE
                                            scale_used
 1 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
 2 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
 3 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
 4 pbo:0-100; ldn:0-100 (0-100 baseline divided by 10)
-                    base_sd_source
-1 pbo:assumed 1.5; ldn:assumed 1.5
-2 pbo:assumed 1.5; ldn:assumed 1.5
-3 pbo:assumed 1.5; ldn:assumed 1.5
-4 pbo:assumed 1.5; ldn:assumed 1.5
+                    base_sd_source                             baseline_bounds
+1 pbo:assumed 1.5; ldn:assumed 1.5 [0.5, 10] (data/params/baseline_bounds.csv)
+2 pbo:assumed 1.5; ldn:assumed 1.5 [0.5, 10] (data/params/baseline_bounds.csv)
+3 pbo:assumed 1.5; ldn:assumed 1.5 [0.5, 10] (data/params/baseline_bounds.csv)
+4 pbo:assumed 1.5; ldn:assumed 1.5 [0.5, 10] (data/params/baseline_bounds.csv)
+  baseline_parent_mu baseline_parent_sigma baseline_parent_matched
+1           5.076776              1.514583                    TRUE
+2           5.076776              1.514583                    TRUE
+3           5.076776              1.514583                    TRUE
+4           5.076776              1.514583                    TRUE
+                                                                                                                                                                               baseline_sampling
+1 truncated normal on the trial's bounds, parent moment-matched to the reported (enrolled) mean and SD (review I3; R2 fix round 1): parent moment-matched to the reported (enrolled) mean and SD
+2 truncated normal on the trial's bounds, parent moment-matched to the reported (enrolled) mean and SD (review I3; R2 fix round 1): parent moment-matched to the reported (enrolled) mean and SD
+3 truncated normal on the trial's bounds, parent moment-matched to the reported (enrolled) mean and SD (review I3; R2 fix round 1): parent moment-matched to the reported (enrolled) mean and SD
+4 truncated normal on the trial's bounds, parent moment-matched to the reported (enrolled) mean and SD (review I3; R2 fix round 1): parent moment-matched to the reported (enrolled) mean and SD
+  pain_end_clip_low_pbo pain_end_clip_high_pbo pain_end_clip_low_ldn
+1               0.00675                      0               0.01200
+2               0.00675                      0               0.01575
+3               0.00675                      0               0.01400
+4               0.00675                      0               0.01600
+  pain_end_clip_high_ldn noise_sd_pbo
+1                      0     11.54003
+2                      0     11.54003
+3                      0     11.54003
+4                      0     11.54003
+  hypothesis omega_p_primary omega_e_primary achieved_sd_pbo_primary
+1         H0           1.983        0.000000                    27.9
+2         H1           2.140        0.009023                    27.9
+3         H2           1.986        0.447813                    27.9
+4         H3           2.189        0.014368                    27.9
+  target_sd_pbo_primary achieved_sd_ldn_primary target_sd_ldn_primary
+1                  27.9                      NA                    NA
+2                  27.9                   26.87                    24
+3                  27.9                   29.09                    24
+4                  27.9                   26.40                    24
+  at_bound_primary omega_p_sens omega_e_sens achieved_sd_pbo_sens
+1            FALSE       0.6298    0.000e+00                 14.6
+2             TRUE       0.7227    7.575e-05                 14.6
+3            FALSE       0.6311    7.575e-05                 14.6
+4            FALSE       0.7527    7.575e-05                 14.6
+  target_sd_pbo_sens achieved_sd_ldn_sens target_sd_ldn_sens at_bound_sens
+1               14.6                   NA                 NA         FALSE
+2               14.6                14.54               12.5          TRUE
+3               14.6                15.07               12.5          TRUE
+4               14.6                14.44               12.5          TRUE
+  omega_p_ratio_sens_over_primary omega_e_ratio_sens_over_primary
+1                          0.3175                             NaN
+2                          0.3376                       0.0083953
+3                          0.3177                       0.0001692
+4                          0.3439                       0.0052723

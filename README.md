@@ -10,7 +10,13 @@ The complete model is executed with:
 Rscript scripts/run_all.R
 ```
 
-This runs all 11 scripts in sequence from data fitting through sensitivity analysis and figure generation.
+This runs, in order:
+
+1. the primary pass, scripts 01-12 (with 05b after 05) under the adopted binding stage in `output/results/binding_stage.txt`;
+2. sensitivity passes for binding stages A2 and A (scripts 04, 05, 06, 07 in summary mode, and 08), each in a work copy with its own freeze manifest, written to `output/results/sensitivity_stage_<S>/`;
+3. a summary across binding stages, `output/results/sensitivity_summary.csv`.
+
+Each script runs in its own R process; logs are in `output/logs/`, per-script times in `output/logs/run_timing.txt` and the session information in `output/results/sessionInfo.txt`. The driver refuses to run over an existing freeze manifest or sensitivity output: archive the previous `output/results`, `output/figures` and `output/logs` (move them to `../_archive/<name>_<YYYYMMDD_HHMMSS>/`) before a clean re-run.
 
 ## Data Organization and Freeze Stages
 

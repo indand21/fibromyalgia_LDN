@@ -79,3 +79,11 @@ test_that("required parameters are enforced per hypothesis", {
   expect_error(simulate_arm("H9", th, sch, 10, flat_cache(), 0), "unknown hypothesis")
   expect_no_error(simulate_arm("H0", th_ne, sch, 10, flat_cache(), 0))
 })
+
+# ---- R3a item 6, M5: a day that was not simulated is an error, not a silent NA ----
+test_that("arm_outcome stops clearly when the requested day was not simulated", {
+  sim <- data.frame(day = 0:10, rel = seq(1, 0.8, length.out = 11))
+  expect_equal(arm_outcome(sim, 10, "pct_reduction", 6), 100 * (1 - 0.8))
+  expect_error(arm_outcome(sim, 84, "change_nrs", 6), "day 84.*not simulated")
+  expect_error(arm_outcome(sim, c(5, 84), "change_nrs", 6), "not simulated")
+})

@@ -1,0 +1,7 @@
+"study","dose_mg","n_doses","time_h","observed_pct","sd","predicted_J","assumed_in_data","note"
+"Weerts 2008",50,4,1,94.9,4.9,95.4906762519428,FALSE,"scan time is assumed (time_basis: assumed 24 h trough; scan on day 18 of once-daily dosing, interval not stated); n_doses = 4 from the curated location text"
+"Weerts 2008",50,4,2,94.9,4.9,98.6443632447281,FALSE,"scan time is assumed (time_basis: assumed 24 h trough; scan on day 18 of once-daily dosing, interval not stated); n_doses = 4 from the curated location text"
+"Weerts 2008",50,4,4,94.9,4.9,98.3468425861803,FALSE,"scan time is assumed (time_basis: assumed 24 h trough; scan on day 18 of once-daily dosing, interval not stated); n_doses = 4 from the curated location text"
+"Weerts 2008",50,4,8,94.9,4.9,96.5004255186841,FALSE,"scan time is assumed (time_basis: assumed 24 h trough; scan on day 18 of once-daily dosing, interval not stated); n_doses = 4 from the curated location text"
+"Weerts 2008",50,4,12,94.9,4.9,94.9242258929464,FALSE,"scan time is assumed (time_basis: assumed 24 h trough; scan on day 18 of once-daily dosing, interval not stated); n_doses = 4 from the curated location text"
+"Weerts 2008",50,4,24,94.9,4.9,90.2249873352109,TRUE,"scan time is assumed (time_basis: assumed 24 h trough; scan on day 18 of once-daily dosing, interval not stated); n_doses = 4 from the curated location text"

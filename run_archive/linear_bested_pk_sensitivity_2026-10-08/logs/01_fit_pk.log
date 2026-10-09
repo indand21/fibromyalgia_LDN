@@ -1,0 +1,58 @@
+Dose-model rule: SENSITIVITY RUN: linear forced (controller ruling F1); fp_dose: dWSS 4.60 (> 3.84), Hessian PD TRUE, worst Verebey row 1.01-fold of linear (limit 1.5) -> qualifies; parent_loss: dWSS 4.51 (> 3.84), Hessian PD TRUE, worst Verebey row 1.02-fold of linear (limit 1.5) -> qualifies. Adopted: fp_dose (both qualify: larger dWSS)
+Adopted PK model: two-compartment, dose model [linear] (linear (fp dose-independent)). Fitted: ka = 1.876 (SE 0.298 on the log scale); CL = 24.21 (SE 0.203 on the log scale); V1 = 100 (SE 0.45 on the log scale); Q = 36.4 (SE 0.9 on the log scale); V2 = 165.3 (SE 0.49 on the log scale); CLm = 65.43 (SE 0.183 on the log scale); Vm = 1035 (SE 0.203 on the log scale). Fixed: fp = 0.95. WSS 7.1034; Hessian positive definite TRUE.
+Dose model: linear (fp dose-independent). Rule (pre-stated; R/pk.R pk_adoption_rule): SENSITIVITY RUN: linear forced (controller ruling F1); fp_dose: dWSS 4.60 (> 3.84), Hessian PD TRUE, worst Verebey row 1.01-fold of linear (limit 1.5) -> qualifies; parent_loss: dWSS 4.51 (> 3.84), Hessian PD TRUE, worst Verebey row 1.02-fold of linear (limit 1.5) -> qualifies. Adopted: fp_dose (both qualify: larger dWSS)
+Implied systemic bioavailability of the parent (1 - fp(D)) x (1 - parent loss(D)): 0.0500 at 4.5 mg and 0.0500 at 100 mg (labelled range 0.05-0.40: inside at 4.5 mg, inside at 100 mg). Comparison of all three structures, D50 10/30/100 mg and the Bested day-21 CV 0.5/1.2 sensitivity: pk_dose_model_comparison.csv; row-level predictions under each: pk_dose_model_vs_obs.csv.
+Structure: two-compartment (WSS one-compartment 16.055 [Hessian PD TRUE], two-compartment 7.103 [Hessian PD TRUE] under the linear dose model; two-compartment adopted only if WSS drops by > 5.99); see pk_structure_summary.csv and pk_structure_comparison.csv. The compartment rule selects the two-compartment structure under the adopted dose model as well.
+C24 (24 h after the acute dose): observed NTX 2.1, BN 17.6; one-compartment predicts NTX 2.80, BN 22.55; two-compartment predicts NTX 2.09, BN 22.51. At least one structure reproduces both 24 h values within a factor of 1.5.
+Objective statistics: C0.25, C0.5, C0.75, C1, C24, Cmax, Css13h, thalf, Tmax. Weights obj_weight / CV^2 with CV = between-subject SD / mean where reported (Verebey 1976; Bested 2023 day-1 SDs digitised from Figure 4), else the documented assumed CV (Bested 2023 day-21 medians: 0.8), else the floor 0.10 (Tmax 0.25); the Bested day-1 profile rows carry obj_weight 1/4 (4 repeated measures per analyte). WSS: total 7.103, Verebey rows 2.955, Bested rows 4.148.
+Final WSS 7.1034; Hessian eigenvalues (of hessian/2): 164.9, 109.7, 21.2, 18.44, 15.1, 4.605, 0.9464; positive definite: TRUE
+ka 1.876 per h (absorption half-life 22.2 min)
+Observations 22 (16 single-dose, 6 once-daily at steady state; 12 at 100 mg, 10 at 4.5 mg) and 22 nominally distinct (dose, regimen, analyte, stat) combinations, 21 distinct predicted values to 6 significant figures and 20 to 3. With 7 fitted parameters: nominal residual degrees of freedom 15, EFFECTIVE 14 (13 at 3 significant figures). The 8 Bested day-1 rows are repeated measures and carry weight 1/4 each.
+Tmax check: NTX observed 1.00 h, predicted 0.93 h; BN observed 2.00 h, predicted 1.92 h
+Parent naltrexone disposition half-lives: distribution 0.92 h, terminal 9.83 h; smallest Hessian eigenvalue 0.946 (largest 165)
+Fixed parameters: fp fixed at 0.95 at the reference dose of 100 mg (the Verebey 1976 dose): the approved naltrexone labelling gives oral bioavailability of 5 to 40 per cent, i.e. a systemic parent fraction (1 - fp) of roughly 0.05 to 0.40; 0.95 sits at the UPPER EDGE of that range (1 - fp = 0.05) and inside the region where the weighted SSE was flat in the R1 free fit (change <= 0.29 for fp 0.9 to 0.999). A dose-dependent structure is anchored at 100 mg, so this value holds there exactly for every D50. Occupancy sensitivity at fp = 0.90 and 0.99 (at 100 mg) is reported in occupancy_sensitivity_J.csv (fits pk_fit_sens_fp090.rds, pk_fit_sens_fp099.rds).
+Limitation (stated; no structure added): the chronic (once-daily, steady-state) 6-beta-naltrexol Cmax is predicted 109.2 vs observed 158.4 ng/mL (0.69-fold). With the 24 h concentrations in the fit, linear kinetics cannot also produce the observed 1.8-fold rise of the chronic over the acute peak; Verebey 1976 itself reports no trough accumulation. The observation's CV (0.57) keeps its weight low.
+Limitation (stated; no structure added): Bested 2023 single NTX (C0.25) observed 0.3, predicted 0.777 (2.59-fold).
+Limitation (stated; no structure added): Bested 2023 single NTX (C0.5) observed 0.66, predicted 1.16 (1.75-fold).
+Limitation (stated; no structure added): Bested 2023 single NTX (C0.75) observed 0.75, predicted 1.31 (1.74-fold).
+Limitation (stated; no structure added): Bested 2023 single NTX (C1) observed 0.49, predicted 1.33 (2.71-fold).
+Limitation (stated; no structure added): Bested 2023 single BN (C0.5) observed 4.61, predicted 2.49 (0.54-fold).
+Limitation (stated; no structure added): Bested 2023 single BN (C0.75) observed 6.14, predicted 3.06 (0.50-fold).
+Limitation (stated; no structure added): Bested 2023 daily NTX (Css13h) observed 0.33, predicted 1.12 (3.39-fold).
+Unbound fraction of 6-beta-naltrexol: fu_BN = 0.79 is taken EQUAL TO THE PARENT's fu_NTX by fallback: no 6-beta-naltrexol plasma-protein-binding value was found (data/README.md 'Not found' list). It is an assumption, not a measurement, and it scales every unbound 6-beta-naltrexol concentration.
+  sensitivity
+1     primary
+2       fp090
+3       fp099
+4    terminal
+                                                                     label
+1                                      primary (fp 0.95 at 100 mg; linear)
+2                                fp at 100 mg fixed at 0.90 (primary 0.95)
+3                                fp at 100 mg fixed at 0.99 (primary 0.95)
+4 terminal-phase sensitivity (Verebey 2.4 -> 1.7 ng/mL, 24-72 h, appended)
+        structure dose_model   fp fp0 floss0 fp_D50        wss hessian_pd
+1 two-compartment     linear 0.95  NA     NA    Inf   7.103414       TRUE
+2 two-compartment     linear 0.90  NA     NA    Inf   7.293623       TRUE
+3 two-compartment     linear 0.99  NA     NA    Inf   6.967091       TRUE
+4 two-compartment     linear 0.95  NA     NA    Inf 134.197977       TRUE
+  min_eigenvalue       ka CL_apparent V1_apparent bioavailability_4.5mg
+1      0.9463686 1.875630    484.1136    2000.583                  0.05
+2      0.7278178 1.924769    483.5016    2038.244                  0.10
+3      0.9622134 1.839319    484.5758    1971.832                  0.01
+4      0.8008591 1.909899    424.3207    2061.884                  0.05
+  bioavailability_100mg parent_t_half_distribution_h parent_t_half_terminal_h
+1                  0.05                    0.9173014                 9.825783
+2                  0.10                    0.9510473                 9.883697
+3                  0.01                    0.8929766                 9.788658
+4                  0.05                    1.4465761                22.957268
+       CLm        Vm
+1 65.42837 1035.0502
+2 65.20901 1001.0341
+3 65.62578 1060.6834
+4 65.99440  998.4508
+Adopted dose model: linear (linear (fp dose-independent)).
+SENSITIVITY RUN: linear forced (controller ruling F1); fp_dose: dWSS 4.60 (> 3.84), Hessian PD TRUE, worst Verebey row 1.01-fold of linear (limit 1.5) -> qualifies; parent_loss: dWSS 4.51 (> 3.84), Hessian PD TRUE, worst Verebey row 1.02-fold of linear (limit 1.5) -> qualifies. Adopted: fp_dose (both qualify: larger dWSS)
+D50 sensitivity: fp_dose D50 10 mg: fp0 1, dWSS 4.37, Hessian PD FALSE (BOUNDARY); fp_dose D50 30 mg: fp0 0.9952, dWSS 4.60, Hessian PD TRUE; fp_dose D50 100 mg: fp0 0.9911, dWSS 4.60, Hessian PD TRUE; parent_loss D50 10 mg: floss0 1, dWSS 4.28, Hessian PD TRUE (BOUNDARY); parent_loss D50 30 mg: floss0 0.9028, dWSS 4.51, Hessian PD TRUE; parent_loss D50 100 mg: floss0 0.8204, dWSS 4.51, Hessian PD TRUE.
+Bested day-21 CV sensitivity: Bested day-21 CV 0.5 (primary 0.8): linear dWSS 0.00; Bested day-21 CV 0.5 (primary 0.8): fp_dose dWSS 7.53 [adopted]; Bested day-21 CV 0.5 (primary 0.8): parent_loss dWSS 7.41; Bested day-21 CV 1.2 (primary 0.8): linear dWSS 0.00 [adopted]; Bested day-21 CV 1.2 (primary 0.8): fp_dose dWSS 3.25; Bested day-21 CV 1.2 (primary 0.8): parent_loss dWSS 3.16.
+The linear model is adopted: the D50 fits are PK outputs only (pk_alt_*.rds, pk_dose_model_comparison.csv) and do not enter the occupancy sensitivity.
+PK output check passed (pk_output_check). Script 01 runtime 103.2 min.

@@ -1,0 +1,7 @@
+"hypothesis_a","hypothesis_b","elpd_diff_a_minus_b","mcse_diff","n_draws","mcse_note"
+"H0","H1",2.50560820260738,0.0712997768950647,1000,"Monte Carlo SE of the contrast from the per-draw paired difference (same predictive seeds across hypotheses)"
+"H0","H2",-0.000267214916634173,0.00107340150321194,1000,"Monte Carlo SE of the contrast from the per-draw paired difference (same predictive seeds across hypotheses)"
+"H0","H3",1.90212208925102,0.0694626223271526,1000,"Monte Carlo SE of the contrast from the per-draw paired difference (same predictive seeds across hypotheses)"
+"H1","H2",-2.50587541752401,0.0713045325987868,1000,"Monte Carlo SE of the contrast from the per-draw paired difference (same predictive seeds across hypotheses)"
+"H1","H3",-0.60348611335636,0.102570351252036,1000,"Monte Carlo SE of the contrast from the per-draw paired difference (same predictive seeds across hypotheses)"
+"H2","H3",1.90238930416765,0.0694402693870399,1000,"Monte Carlo SE of the contrast from the per-draw paired difference (same predictive seeds across hypotheses)"

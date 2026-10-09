@@ -20,8 +20,10 @@ write.csv(data.frame(analyte = c("NTX", "BN"), koff_per_h = c(bp$koff_NTX, bp$ko
                      source = c(bp$koff_NTX_source, bp$koff_BN_source)), "output/results/koff_provenance.csv", row.names = FALSE)
 bp$Kd_NTX_source <- pool_binding(bc, "NTX", "MOR", "Ki")$source
 bp$Kd_BN_source <- pool_binding(bc, "BN", "MOR", "Ki")$source
-doses <- c(0, 0.75, 1.5, 2, 3, 3.88, 4.5, 5, 5.4, 6, 10, 15, 20, 50)
-cache <- exposure_cache(doses, pk$par, bp)
+# 0.1, 0.25 and 0.5 mg (R3a, review M7): the Bruun-Plesner check in script 04 needs doses below 0.75 mg, where H1's
+# effect peaked on the old grid. Scripts 03 (A2, J) reuse this grid, so every stage cache gains them.
+doses <- c(0, 0.1, 0.25, 0.5, 0.75, 1.5, 2, 3, 3.88, 4.5, 5, 5.4, 6, 10, 15, 20, 50)
+cache <- exposure_cache(doses, pk$par, bp, max_doses = EXPOSURE_MAX_DOSES)
 saveRDS(bp, "output/results/binding_params_A.rds"); saveRDS(cache, "output/results/exposure_cache_A.rds")
 ss <- steady_state_occupancy(cache)
 write.csv(ss, "output/results/steady_state_occupancy_A.csv", row.names = FALSE)
@@ -31,6 +33,6 @@ dk <- do.call(rbind, lapply(c(4.5, 50), function(d) { pr <- cache[[as.character(
   do.call(rbind, lapply(c("DOR", "KOR"), function(tg) data.frame(dose_mg = d, target = tg,
     mean_occupancy = equilibrium_occupancy(mean(pr$Cu_NTX), mean(pr$Cu_BN), ki("NTX", tg), ki("BN", tg))))) }))
 write.csv(dk, "output/results/dor_kor_occupancy_A.csv", row.names = FALSE)
-freeze_stage("A", c("data/training/pk_summary.csv", "data/params/binding_constants.csv",
+freeze_stage("A", c("data/training/pk_summary.csv", "data/training/pk_summary_sensitivity_terminal.csv", "data/params/binding_constants.csv",
                     "output/results/pk_fit.rds", "output/results/binding_params_A.rds"))
 print(ss)

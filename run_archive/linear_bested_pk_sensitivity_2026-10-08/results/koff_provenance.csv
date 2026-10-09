@@ -1,0 +1,3 @@
+"analyte","koff_per_h","koff_assumed","source"
+"NTX",21,FALSE,"Cassel 2005 (DOI 10.1016/j.ejphar.2005.08.008) [human]"
+"BN",2,TRUE,"assumed: koff = 2 per h (no curated koff row for this analyte; rapid-equilibrium assumption)"

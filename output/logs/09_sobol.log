@@ -1,4 +1,61 @@
-hypothesis H2, d = 3, 8.5 ms/evaluation, ~1.4 min for 10000 evaluations
+  hypothesis net_effect_pp eligible
+1         H0  0.0000000000    FALSE
+2         H1  7.9313114541     TRUE
+3         H2  0.0001172742    FALSE
+4         H3  9.6206382175     TRUE
+                                                     sobol_role
+1                                         not run: no drug term
+2                                                           run
+3 not run: net effect 0.000117 pp is below the 0.5 pp threshold
+4                                                           run
 Registered S3 method overwritten by 'sensitivity':
   method    from 
   print.src dplyr
+Sobol (N = 20000, seeds 3 and 17) on 10 worker(s) in 9.3 min
+seed agreement: 6 of 36 indices disagree beyond the larger CI half-width
+   hypothesis day     parameter        S1       ST seed_disagree_S1
+1          H0  14          <NA>        NA       NA               NA
+2          H0  84          <NA>        NA       NA               NA
+3          H1  14      log_kpbo -4.58e-05 2.11e-05            FALSE
+4          H1  14      log_kout  1.01e-01 2.44e-01            FALSE
+5          H1  14    logit_Emax  1.21e-01 3.36e-01            FALSE
+6          H1  14        log_kA  9.51e-02 2.41e-01            FALSE
+7          H1  14     log_gamma  3.44e-01 6.18e-01            FALSE
+8          H1  84      log_kpbo -4.22e-07 4.88e-10            FALSE
+9          H1  84      log_kout  1.00e-02 1.55e-02             TRUE
+10         H1  84    logit_Emax  2.30e-01 4.09e-01            FALSE
+11         H1  84        log_kA  5.43e-03 1.45e-02            FALSE
+12         H1  84     log_gamma  6.00e-01 7.65e-01             TRUE
+13         H2  14          <NA>        NA       NA               NA
+14         H2  84          <NA>        NA       NA               NA
+15         H3  14      log_kpbo -1.23e-04 2.11e-05            FALSE
+16         H3  14      log_kout  9.85e-02 2.32e-01            FALSE
+17         H3  14    logit_Emax  1.90e-01 4.07e-01            FALSE
+18         H3  14 log10_Kd_OGFr  4.53e-01 7.26e-01            FALSE
+19         H3  84      log_kpbo -7.15e-07 4.48e-10            FALSE
+20         H3  84      log_kout  7.73e-03 1.22e-02             TRUE
+21         H3  84    logit_Emax  2.43e-01 4.37e-01            FALSE
+22         H3  84 log10_Kd_OGFr  5.72e-01 7.87e-01            FALSE
+   seed_disagree_ST eligible
+1                NA    FALSE
+2                NA    FALSE
+3             FALSE     TRUE
+4             FALSE     TRUE
+5             FALSE     TRUE
+6              TRUE     TRUE
+7             FALSE     TRUE
+8             FALSE     TRUE
+9             FALSE     TRUE
+10            FALSE     TRUE
+11            FALSE     TRUE
+12             TRUE     TRUE
+13               NA    FALSE
+14               NA    FALSE
+15            FALSE     TRUE
+16            FALSE     TRUE
+17            FALSE     TRUE
+18            FALSE     TRUE
+19            FALSE     TRUE
+20             TRUE     TRUE
+21            FALSE     TRUE
+22            FALSE     TRUE

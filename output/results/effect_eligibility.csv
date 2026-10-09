@@ -1,0 +1,5 @@
+"hypothesis","day","net_effect_pp","threshold_pp","eligible","sobol_role","power_role"
+"H0",84,0,0.5,FALSE,"not run: no drug term","type I error check (no drug term)"
+"H1",84,7.93131145408322,0.5,TRUE,"run","assurance (posterior-averaged power)"
+"H2",84,0.000117274228284003,0.5,FALSE,"not run: net effect 0.000117 pp is below the 0.5 pp threshold","not run: net effect 0.000117 pp is below the 0.5 pp threshold"
+"H3",84,9.62063821753026,0.5,TRUE,"run","assurance (posterior-averaged power)"

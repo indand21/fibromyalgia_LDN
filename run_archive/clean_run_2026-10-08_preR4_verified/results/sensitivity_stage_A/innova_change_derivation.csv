@@ -1,0 +1,7 @@
+"trial","arm","day","level","baseline","change_derived","change_curated","agrees_within_rounding"
+"innova","ldn_4.5mg",90,7.33,7.66,-0.33,-0.33,TRUE
+"innova","placebo",90,6.83,7.47,-0.64,-0.64,TRUE
+"innova","ldn_4.5mg",180,7.21,7.66,-0.45,-0.45,TRUE
+"innova","placebo",180,7.08,7.47,-0.39,-0.39,TRUE
+"innova","ldn_4.5mg",365,7.38,7.66,-0.28,-0.28,TRUE
+"innova","placebo",365,7.1,7.47,-0.37,-0.37,TRUE

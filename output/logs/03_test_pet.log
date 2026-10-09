@@ -1,14 +1,64 @@
-                 stage  n      RMSE      MAE n_within_15
-1                    A 11 31.436906 25.09999           4
-2          A2 held-out  5 46.159117 42.83841           0
-3 A held-out (matched)  5 22.692451 17.58166           2
-4               A2 all 11 31.570282 22.47750           6
-5       A2 calibration  6  7.190143  5.51007           6
-6        A calibration  6 37.184972 31.36527           2
-                                            rows
-1                                       all rows
-2                     held-out rows only (n = 5)
-3              same held-out rows as A2 held-out
-4          all rows (6 calibration + 5 held-out)
-5             calibration rows (Rabiner; fitted)
-6 calibration rows (Rabiner; not fitted under A)
+                 stage  n      RMSE       MAE n_within_15
+1                    A 11 28.818364 24.459557           4
+2          A2 held-out  5 45.729728 42.329361           0
+3 A held-out (matched)  5 28.285873 23.745223           2
+4               A2 all 11 31.371226 22.518352           6
+5       A2 calibration  6  7.849122  6.009178           6
+6        A calibration  6 29.254704 25.054836           2
+7                J all 11 11.552806  7.227487          10
+8            J Rabiner  6 15.483641 11.315530           5
+9       J Lee + Weerts  5  2.436458  2.321836           5
+                                            rows       wSSE
+1   all rows (held-out: stage A fits no PET row)  91.368009
+2                     held-out rows only (n = 5) 114.280623
+3              same held-out rows as A2 held-out  40.017746
+4          all rows (6 calibration + 5 held-out) 117.977146
+5             calibration rows (Rabiner; fitted)   3.696523
+6 calibration rows (Rabiner; not fitted under A)  51.350263
+7      all rows (all are calibration data for J)  14.826060
+8                     Rabiner rows (calibration)  14.384589
+9    Lee 1988 and Weerts 2008 rows (calibration)   0.441471
+    keq     wsse     rmse  kd_scale log_kd_scale_se   koff_scale
+0.5 0.5 13.01525 10.87171 0.8282457       0.3352136 0.0059235991
+2   2.0 14.82606 11.55281 0.3036417       0.4553264 0.0011626852
+8   8.0 14.95680 11.58239 0.2464555       0.3392399 0.0008653015
+    log_koff_scale_se hessian_pd Kd_NTX_nM  Kd_BN_nM koff_NTX_per_h
+0.5         0.2801238       TRUE 0.3895714 1.7558808     0.12439558
+2           0.3945194       TRUE 0.1428201 0.6437205     0.02441639
+8           0.3258839       TRUE 0.1159222 0.5224857     0.01817133
+    koff_BN_per_h mean_ss_occupancy_1.5mg mean_ss_occupancy_4.5mg
+0.5   0.011847198               0.5800739               0.8085851
+2     0.002325370               0.7908518               0.9209138
+8     0.001730603               0.8233405               0.9349876
+    mean_ss_occupancy_6mg n_starts start_wsse_spread adopted
+0.5             0.8493659        2      2.571614e-07   FALSE
+2               0.9395125        2      4.801063e-07    TRUE
+8               0.9504978        2      8.188236e-07   FALSE
+  stage model_ed50_mg time_h rabiner_ed50_mg rabiner_lo95 rabiner_hi95
+1     A      1.001643      4             5.6         3.65         7.54
+2    A2      5.541286      4             5.6         3.65         7.54
+3     J      5.202082      4             5.6         3.65         7.54
+  ratio_model_to_rabiner within_rabiner_ci
+1              0.1788649             FALSE
+2              0.9895154              TRUE
+3              0.9289432              TRUE
+  stage dose_mg uncertainty_source mean_RO_point mean_RO_median mean_RO_lo95
+1     J     1.5       binding_only     0.7908518      0.7867187    0.6099632
+2     J     4.5       binding_only     0.9209138      0.9189647    0.8294592
+3     J     6.0       binding_only     0.9395125      0.9377325    0.8671389
+4     J     1.5     binding_and_pk     0.7908518      0.8012486    0.6135855
+5     J     4.5     binding_and_pk     0.9209138      0.9244230    0.8333415
+6     J     6.0     binding_and_pk     0.9395125      0.9414323    0.8722815
+7     J     1.5    keq_sensitivity     0.7908518             NA    0.5800739
+8     J     4.5    keq_sensitivity     0.9209138             NA    0.8085851
+9     J     6.0    keq_sensitivity     0.9395125             NA    0.8493659
+  mean_RO_hi95 n_draws
+1    0.9024535     500
+2    0.9657881     500
+3    0.9738150     500
+4    0.9347217     500
+5    0.9743248     500
+6    0.9795903     500
+7    0.8233405       3
+8    0.9349876       3
+9    0.9504978       3
